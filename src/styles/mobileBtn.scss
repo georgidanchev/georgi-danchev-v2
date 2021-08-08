@@ -1,0 +1,88 @@
+.menu-btn {
+  $menu-height: 45px;
+  $menu-width: 45px;
+  $line-width: 30px;
+  $line-height: 5px;
+  $line-space: 5px;
+  $line-space-hover: 7px;
+  $border-offset: 0.25px;
+  $menu-center: $menu-height/2 - $line-height/2;
+  display: inline-block;
+  position: relative;
+  height: $menu-height;
+  width: $menu-width;
+  border: none;
+
+  &__wrap {
+    // border: 1px solid rgba(#fff, 0.45);
+    // box-shadow: 1px 1px 1px #000;
+    background-color: var(--secondary-colour);
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+  }
+
+  &:hover &__wrap,
+  &:focus &__wrap {
+    border: 1px solid rgba(var(--colour-color), 0.45);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &__line {
+    transition: opacity 200ms, top 200ms, transform 300ms;
+    backface-visibility: hidden;
+
+    height: $line-height;
+    width: $line-width;
+
+    left: ($menu-width / 2 - $line-width / 2 + $border-offset);
+
+    position: absolute;
+    background-color: var(--black-colour);
+    border-radius: 1px;
+    pointer-events: none;
+  }
+
+  &__line-1 {
+    top: ($menu-center - $line-height - $line-space + $border-offset);
+  }
+
+  &__line-2 {
+    top: ($menu-center + $border-offset);
+  }
+
+  &__line-3 {
+    top: ($menu-center + $line-height + $line-space + $border-offset);
+  }
+
+  &:hover &__line-1 {
+    top: ($menu-center - $line-height - $line-space-hover + $border-offset);
+  }
+
+  &:hover &__line-3 {
+    top: ($menu-center + $line-height + $line-space-hover + $border-offset);
+  }
+
+  &.active {
+    .menu-btn__line {
+      transition: opacity 100ms, top 300ms, transform 300ms;
+    }
+
+    .menu-btn__line-1 {
+      transform: rotate(135deg);
+      top: ($menu-center + $border-offset);
+    }
+
+    .menu-btn__line-2 {
+      opacity: 0;
+    }
+
+    .menu-btn__line-3 {
+      transform: rotate(-135deg);
+      top: ($menu-center + $border-offset);
+    }
+  }
+}

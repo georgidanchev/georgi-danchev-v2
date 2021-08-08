@@ -1,0 +1,86 @@
+@import "~normalize-scss/sass/normalize/import-now";
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.srt-wrap::-ms-expand {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style-type: none;
+}
+
+abbr {
+  text-decoration: none !important;
+  cursor: help;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Prevent MacOS Over Scroll */
+  overscroll-behavior-y: none;
+
+  /* body has min-width 100% */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* expand main to cover page when smaller then 100vh */
+
+main {
+  flex: 1;
+}
+
+/* Allows you to enable CSS on IOS for
+ buttons links and inputs */
+
+input,
+a,
+button {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
