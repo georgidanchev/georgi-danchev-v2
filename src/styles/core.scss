@@ -49,7 +49,7 @@ abbr {
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -60,6 +60,7 @@ html {
 
 body {
   /* Prevent MacOS Over Scroll */
+  background-color: var(--gray-colour);
   overscroll-behavior-y: none;
 
   /* body has min-width 100% */
@@ -82,5 +83,9 @@ a,
 button {
   -webkit-appearance: none;
   border-radius: 0;
+}
+
+a {
+  display: inline-block;
 }
 

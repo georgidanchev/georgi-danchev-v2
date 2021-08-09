@@ -11,13 +11,14 @@
   position: relative;
   height: $menu-height;
   width: $menu-width;
+  border-radius: 5px;
+  overflow: hidden;
   border: none;
 
   &__wrap {
     // border: 1px solid rgba(#fff, 0.45);
     // box-shadow: 1px 1px 1px #000;
     background-color: var(--secondary-colour);
-    border-radius: 5px;
     height: 100%;
     width: 100%;
   }
