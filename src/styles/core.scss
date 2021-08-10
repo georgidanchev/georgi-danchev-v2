@@ -59,8 +59,10 @@ html {
 }
 
 body {
+  background-color: var(--primary-colour);
+  color: var(--white-colour);
+
   /* Prevent MacOS Over Scroll */
-  background-color: var(--gray-colour);
   overscroll-behavior-y: none;
 
   /* body has min-width 100% */

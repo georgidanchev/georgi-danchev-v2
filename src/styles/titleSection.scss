@@ -1,0 +1,18 @@
+.title-section {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  &__title {
+    font-weight: bold;
+    line-height: 83px;
+    font-size: 62px;
+  }
+
+  &__text {
+    font-size: 26px;
+    line-height: 31px;
+  }
+}

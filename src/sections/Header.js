@@ -6,8 +6,8 @@ import "../styles/header.scss"
 
 const Header = () => {
   return (
-    <header className="header section-width">
-      <div className="header__inner ">
+    <header className="header section--header section-width">
+      <div className="header__inner">
         <MobileBtn />
         <SocialLinks />
       </div>
