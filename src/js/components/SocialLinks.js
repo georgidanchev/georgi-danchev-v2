@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/socialLinks.scss"
+import "../../styles/components/socialLinks.scss"
 
 const socialLinks = () => {
   return (

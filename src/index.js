@@ -1,12 +1,11 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import Header from "./sections/Header"
-import Hero from "./sections/Hero"
+import Header from "./js/sections/Header"
+import Hero from "./js/sections/Hero"
 
-import "./styles/variables.css"
-import "./styles/core.scss"
-import "./styles/globals.scss"
-import "./styles/sections.scss"
+import "./styles/base/variables.css"
+import "./styles/base/core.scss"
+import "./styles/layout/sections.scss"
 
 ReactDOM.render(
   <React.StrictMode>

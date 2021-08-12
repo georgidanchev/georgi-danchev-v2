@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/titleSection.scss"
+import "../../styles/components/titleSection.scss"
 
 const Hero = () => {
   return (

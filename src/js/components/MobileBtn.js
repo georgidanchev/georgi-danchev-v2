@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/mobileBtn.scss"
+import "../../styles/components/mobileBtn.scss"
 
 const MobileBtn = () => {
   return (

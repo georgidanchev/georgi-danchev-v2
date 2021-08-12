@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/nameTitle.scss"
+import "../../styles/components/nameTitle.scss"
 
 const NameTitle = () => {
   return (
