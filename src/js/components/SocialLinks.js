@@ -1,10 +1,9 @@
-import React from "react"
 import "../../styles/components/socialLinks.scss"
 
 const socialLinks = () => {
   return (
     <ul className="social-links">
-      <li className="social-links__list-item">
+      {/* <li className="social-links__list-item">
         <a href="social-links__link">
           <svg class="social-links__icon" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -13,7 +12,7 @@ const socialLinks = () => {
             />
           </svg>
         </a>
-      </li>
+      </li> */}
       <li className="social-links__list-item">
         <a href="social-links__link">
           <svg class="social-links__icon" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,7 +33,7 @@ const socialLinks = () => {
           </svg>
         </a>
       </li>
-      <li className="social-links__list-item">
+      {/* <li className="social-links__list-item">
         <a href="social-links__link">
           <svg class="social-links__icon" width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -47,7 +46,7 @@ const socialLinks = () => {
             />
           </svg>
         </a>
-      </li>
+      </li> */}
       <li className="social-links__list-item">
         <a href="social-links__link">
           <svg class="social-links__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

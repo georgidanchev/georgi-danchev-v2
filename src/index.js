@@ -2,15 +2,26 @@ import React from "react"
 import ReactDOM from "react-dom"
 import Header from "./js/sections/Header"
 import Hero from "./js/sections/Hero"
+import About from "./js/sections/About"
+import Projects from "./js/sections/Projects"
+import Blogs from "./js/sections/Blogs"
+import Contact from "./js/sections/Contact"
+import Footer from "./js/sections/Footer"
 
 import "./styles/base/variables.css"
 import "./styles/base/core.scss"
+import "./styles/base/globals.scss"
 import "./styles/layout/sections.scss"
 
 ReactDOM.render(
   <React.StrictMode>
     <Header />
     <Hero />
+    <About />
+    <Projects />
+    <Blogs />
+    <Contact />
+    <Footer />
   </React.StrictMode>,
   document.getElementById("root")
 )
