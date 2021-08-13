@@ -1,8 +1,27 @@
 .section-width {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1170px;
-  width: 100%;
   padding-right: 40px;
   padding-left: 40px;
+  max-width: 1250px;
+  width: 100%;
+}
+
+.decorative-border {
+  pointer-events: none;
+
+  &__inner {
+    height: 12vh;
+    background-color: var(--primary-colour);
+  }
+
+  &__inner--top {
+    transform: translateY(100%);
+    clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
+  }
+
+  &__inner--bottom {
+    transform: rotate(-180deg) translateY(100%);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+  }
 }
