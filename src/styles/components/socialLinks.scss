@@ -1,11 +1,10 @@
 .social-links {
   display: flex;
-  margin-left: 40px;
   justify-content: center;
   align-items: center;
 
   &__list-item:not(:first-child) {
-    margin-left: 14px;
+    margin-left: 20px;
   }
 
   &__link {

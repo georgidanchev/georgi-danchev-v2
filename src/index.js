@@ -18,19 +18,19 @@ ReactDOM.render(
     <Header />
     <Hero />
     <div className="decorative-border">
-      <div class="decorative-border__inner decorative-border__inner--bottom"></div>
+      <div className="decorative-border__inner decorative-border__inner--bottom"></div>
     </div>
     <About />
     <div className="decorative-border">
-      <div class="decorative-border__inner decorative-border__inner--top"></div>
+      <div className="decorative-border__inner decorative-border__inner--top"></div>
     </div>
     <Projects />
     <div className="decorative-border">
-      <div class="decorative-border__inner decorative-border__inner--bottom"></div>
+      <div className="decorative-border__inner decorative-border__inner--bottom"></div>
     </div>
     <Blogs />
     <div className="decorative-border">
-      <div class="decorative-border__inner decorative-border__inner--top"></div>
+      <div className="decorative-border__inner decorative-border__inner--top"></div>
     </div>
     <Contact />
     <Footer />

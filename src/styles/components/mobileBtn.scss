@@ -1,9 +1,9 @@
 .menu-btn {
-  $menu-height: 45px;
-  $menu-width: 45px;
+  $menu-height: 55px;
+  $menu-width: 55px;
   $line-width: 30px;
-  $line-height: 5px;
-  $line-space: 5px;
+  $line-height: 3.333px;
+  $line-space: 6.666px;
   $line-space-hover: 7px;
   $border-offset: 0.25px;
   $menu-center: $menu-height/2 - $line-height/2;
@@ -12,12 +12,11 @@
   height: $menu-height;
   width: $menu-width;
   border-radius: 5px;
+  margin-right: 40px;
   overflow: hidden;
   border: none;
 
   &__wrap {
-    // border: 1px solid rgba(#fff, 0.45);
-    // box-shadow: 1px 1px 1px #000;
     background-color: var(--secondary-colour);
     height: 100%;
     width: 100%;
@@ -33,18 +32,15 @@
   }
 
   &__line {
-    transition: opacity 200ms, top 200ms, transform 300ms;
     backface-visibility: hidden;
-
-    height: $line-height;
-    width: $line-width;
-
-    left: ($menu-width / 2 - $line-width / 2 + $border-offset);
-
-    position: absolute;
     background-color: var(--black-colour);
-    border-radius: 1px;
+    border-radius: 5px;
+    height: $line-height;
+    left: ($menu-width / 2 - $line-width / 2 + $border-offset);
     pointer-events: none;
+    position: absolute;
+    transition: width 200ms, opacity 200ms, top 200ms, transform 300ms;
+    width: $line-width;
   }
 
   &__line-1 {
@@ -53,16 +49,24 @@
 
   &__line-2 {
     top: ($menu-center + $border-offset);
+    width: ($line-width - 10px);
   }
 
   &__line-3 {
     top: ($menu-center + $line-height + $line-space + $border-offset);
   }
 
+  &:focus &__line-1,
   &:hover &__line-1 {
     top: ($menu-center - $line-height - $line-space-hover + $border-offset);
   }
 
+  &:focus &__line-2,
+  &:hover &__line-2 {
+    width: $line-width;
+  }
+
+  &:focus &__line-3,
   &:hover &__line-3 {
     top: ($menu-center + $line-height + $line-space-hover + $border-offset);
   }
