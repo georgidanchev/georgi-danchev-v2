@@ -6,9 +6,9 @@ import "../../styles/sections/footer.scss"
 const Footer = () => {
   return (
     <div className="footer section-width">
-      <Copyright />
-      <NameTitle />
       <SocialLinks />
+      <NameTitle />
+      <Copyright />
     </div>
   )
 }

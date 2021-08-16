@@ -1,9 +1,10 @@
 import "../../styles/components/copyright.scss"
 
 const Copyright = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <div className="copyright">
-      <p className="copyright__text">© Copyright 2021, All Rights Reserved</p>
+      <p className="copyright__text">©{ currentYear }, All Rights Reserved</p>
     </div>
   )
 }

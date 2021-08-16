@@ -1,6 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import Header from "./js/sections/Header"
+import DotNavs from "./js/sections/DotNavs"
 import Hero from "./js/sections/Hero"
 import About from "./js/sections/About"
 import Projects from "./js/sections/Projects"
@@ -16,6 +17,7 @@ import "./styles/layout/sections.scss"
 ReactDOM.render(
   <React.StrictMode>
     <Header />
+    <DotNavs />
     <Hero />
     <div className="decorative-border">
       <div className="decorative-border__inner decorative-border__inner--bottom"></div>
