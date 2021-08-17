@@ -11,5 +11,14 @@
     display: flex;
     justify-content: center;
     align-content: center;
+
+    &:hover svg,
+    &:focus svg {
+      stroke: var(--secondary-colour);
+    }
+  }
+
+  &__icon {
+    transition: stroke 300ms ease;
   }
 }

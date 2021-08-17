@@ -1,5 +1,3 @@
-import "../../styles/components/socialLinks.scss"
-
 const socialLinks = () => {
   const { REACT_APP_LINKEDIN, REACT_APP_GITHUB, REACT_APP_INSTAGRAM } = process.env
 

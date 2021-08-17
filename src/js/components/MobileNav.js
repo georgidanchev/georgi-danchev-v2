@@ -1,5 +1,3 @@
-import "../../styles/components/mobileNav.scss"
-
 const MobileNav = () => {
   return (
     <div className="mobileNav">

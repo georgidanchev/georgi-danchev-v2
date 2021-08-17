@@ -1,0 +1,32 @@
+.dot-navs {
+  position: fixed;
+  transform: translateY(-50%);
+  z-index: 1;
+  right: 30px;
+  top: 50%;
+
+  &__list-item {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  &__link {
+    transition: background-color 300ms ease;
+    width: 25px;
+    height: 25px;
+    background-color: var(--gray-colour-2);
+    border-radius: 50%;
+    display: block;
+
+    &:hover,
+    &:focus {
+      background-color: var(--secondary-colour);
+    }
+
+    &.active {
+      background-color: var(--secondary-colour);
+      border-radius: 13.5px;
+      height: 40px;
+    }
+  }
+}

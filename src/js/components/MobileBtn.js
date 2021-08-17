@@ -1,5 +1,3 @@
-import "../../styles/components/mobileBtn.scss"
-
 const MobileBtn = () => {
   const btnClick = (e) => {
     if (e.target.classList.contains("active")) {

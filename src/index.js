@@ -1,39 +1,28 @@
-import React from "react"
-import ReactDOM from "react-dom"
-import Header from "./js/sections/Header"
-import DotNavs from "./js/sections/DotNavs"
-import Hero from "./js/sections/Hero"
 import About from "./js/sections/About"
-import Projects from "./js/sections/Projects"
 import Blogs from "./js/sections/Blogs"
 import Contact from "./js/sections/Contact"
+import DecorativeBorder from "./js/components/DecorativeBorder"
+import DotNavs from "./js/sections/DotNavs"
 import Footer from "./js/sections/Footer"
-
-import "./styles/base/variables.css"
-import "./styles/base/core.scss"
-import "./styles/base/globals.scss"
-import "./styles/layout/sections.scss"
+import Header from "./js/sections/Header"
+import Hero from "./js/sections/Hero"
+import Projects from "./js/sections/Projects"
+import React from "react"
+import ReactDOM from "react-dom"
+import "./styles/app.scss"
 
 ReactDOM.render(
   <React.StrictMode>
     <Header />
     <DotNavs />
     <Hero />
-    <div className="decorative-border">
-      <div className="decorative-border__inner decorative-border__inner--bottom"></div>
-    </div>
+    <DecorativeBorder location="bottom" />
     <About />
-    <div className="decorative-border">
-      <div className="decorative-border__inner decorative-border__inner--top"></div>
-    </div>
+    <DecorativeBorder location="top" />
     <Projects />
-    <div className="decorative-border">
-      <div className="decorative-border__inner decorative-border__inner--bottom"></div>
-    </div>
+    <DecorativeBorder location="bottom" />
     <Blogs />
-    <div className="decorative-border">
-      <div className="decorative-border__inner decorative-border__inner--top"></div>
-    </div>
+    <DecorativeBorder location="top" />
     <Contact />
     <Footer />
   </React.StrictMode>,

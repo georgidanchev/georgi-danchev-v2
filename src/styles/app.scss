@@ -1,0 +1,18 @@
+@import "./base/variables";
+@import "./base/core";
+@import "./base/globals";
+@import "./base/btns";
+
+@import "./layout/sections.scss";
+
+@import "./components/copyright.scss";
+@import "./components/dotNavs.scss";
+@import "./components/mobileBtn.scss";
+@import "./components/mobileNav.scss";
+@import "./components/nameTitle.scss";
+@import "./components/socialLinks.scss";
+@import "./components/titleSection.scss";
+
+@import "./sections/header.scss";
+@import "./sections/about.scss";
+@import "./sections/footer.scss";

@@ -14,11 +14,11 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "deploy": "firebase deploy",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "react-scripts start",
+    "dev:build": "react-scripts build",
+    "dev:deploy": "firebase deploy",
+    "dev:test": "react-scripts test",
+    "dev:eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
