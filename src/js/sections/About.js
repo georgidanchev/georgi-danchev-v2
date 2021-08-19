@@ -1,4 +1,4 @@
-import portrait from "../../images/me.jpg"
+import portrait from "../../assets/me.jpg"
 import SkillChart from "../components/SkillChart"
 import SectionHeader from "../components/SectionHeader"
 

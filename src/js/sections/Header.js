@@ -6,14 +6,14 @@ import MobileNav from "../components/MobileNav"
 const Header = () => {
   return (
     <header className="header">
-      <div class="header__container section-width">
+      <div className="header__container section-width">
         <NameTitle />
         <div className="header__inner">
           <SocialLinks />
-          <MobileNav />
           <MobileBtn />
         </div>
       </div>
+      <MobileNav />
     </header>
   )
 }

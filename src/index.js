@@ -5,7 +5,7 @@ import DecorativeBorder from "./js/components/DecorativeBorder"
 import DotNavs from "./js/sections/DotNavs"
 import Footer from "./js/sections/Footer"
 import Header from "./js/sections/Header"
-import Hero from "./js/sections/Hero"
+import Home from "./js/sections/Home"
 import Projects from "./js/sections/Projects"
 import React from "react"
 import ReactDOM from "react-dom"
@@ -15,7 +15,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Header />
     <DotNavs />
-    <Hero />
+    <Home />
     <DecorativeBorder location="bottom" />
     <About />
     <DecorativeBorder location="top" />

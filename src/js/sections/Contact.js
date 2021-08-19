@@ -1,4 +1,4 @@
-import contactSVG from "../../images/contact.svg"
+import contactSVG from "../../assets/contact.svg"
 
 const About = () => {
   const inputChange = (e) => {

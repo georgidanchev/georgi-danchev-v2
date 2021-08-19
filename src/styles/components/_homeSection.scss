@@ -1,4 +1,4 @@
-.title-section {
+.home-section {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -29,5 +29,17 @@
   &__text {
     @include fluid-type(500px, 1600px, 20px, 26px);
     line-height: 1.2;
+  }
+
+  #tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @include media("<desktop") {
+      display: none;
+    }
   }
 }

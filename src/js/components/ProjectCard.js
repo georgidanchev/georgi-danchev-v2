@@ -1,4 +1,4 @@
-import image from "../../images/about.jpg"
+import image from "../../assets/about.jpg"
 
 const ProjectCard = (props) => {
   return (

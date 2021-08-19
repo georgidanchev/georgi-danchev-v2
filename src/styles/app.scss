@@ -7,7 +7,6 @@
 @import "./base/globals";
 @import "./base/buttons";
 
-
 // Layout
 @import "./layout/sections";
 
@@ -18,13 +17,13 @@
 @import "./components/mobileNav";
 @import "./components/nameTitle";
 @import "./components/socialLinks";
-@import "./components/titleSection";
+@import "./components/homeSection";
 @import "./components/skillChart";
 @import "./components/sectionHeader";
 @import "./components/projectCard";
 @import "./components/blog-post";
 @import "./components/contact-form";
-@import "./components/decorative-border";
+@import "./components/decorativeBorder";
 
 // Sections
 @import "./sections/header";
