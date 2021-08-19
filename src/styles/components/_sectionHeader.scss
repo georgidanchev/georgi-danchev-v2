@@ -1,0 +1,21 @@
+.section-header {
+  &--w-t-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__subheading {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 31px;
+    text-transform: uppercase;
+    color: var(--secondary-colour);
+  }
+  
+  &__heading {
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 65px;
+  }
+}

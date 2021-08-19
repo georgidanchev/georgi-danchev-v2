@@ -1,0 +1,36 @@
+.blog-post {
+  transition: background-color 300ms ease;
+  display: flex;
+  align-items: center;
+  background-color: var(--gray-colour-4);
+  border-radius: 6px;
+  padding: 36px;
+
+  &:hover,
+  &:focus {
+    background-color: var(--secondary-colour);
+    color: var(--black-colour);
+  }
+
+  &__image {
+    margin-right: 36px;
+    border-radius: 6px;
+  }
+
+  &__label {
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+  }
+
+  &__icon {
+    margin-right: 12px;
+  }
+
+  &__label-wraps {
+    margin-top: 22px;
+    display: flex;
+  }
+}

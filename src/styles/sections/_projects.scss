@@ -1,0 +1,23 @@
+.projects {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  &__cards-wrapper {
+    margin-top: 50px;
+  }
+
+  &__cards-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &__cta {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

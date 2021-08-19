@@ -1,18 +1,28 @@
+// Base
 @import "./base/variables";
 @import "./base/core";
 @import "./base/globals";
 @import "./base/btns";
 
-@import "./layout/sections.scss";
+// Layout
+@import "./layout/sections";
 
-@import "./components/copyright.scss";
-@import "./components/dotNavs.scss";
-@import "./components/mobileBtn.scss";
-@import "./components/mobileNav.scss";
-@import "./components/nameTitle.scss";
-@import "./components/socialLinks.scss";
-@import "./components/titleSection.scss";
+// Components
+@import "./components/copyright";
+@import "./components/dotNavs";
+@import "./components/mobileBtn";
+@import "./components/mobileNav";
+@import "./components/nameTitle";
+@import "./components/socialLinks";
+@import "./components/titleSection";
+@import "./components/skillChart";
+@import "./components/sectionHeader";
+@import "./components/projectCard";
+@import "./components/blog-post";
 
-@import "./sections/header.scss";
-@import "./sections/about.scss";
-@import "./sections/footer.scss";
+// Sections
+@import "./sections/header";
+@import "./sections/about";
+@import "./sections/blog";
+@import "./sections/projects";
+@import "./sections/footer";

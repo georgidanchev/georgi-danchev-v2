@@ -2,9 +2,9 @@
   $menu-height: 65px;
   $menu-width: 65px;
   $line-width: 30px;
-  $line-height: 3.333px;
-  $line-space: 6.666px;
-  $line-space-hover: 7px;
+  $line-height: 3px;
+  $line-space: 6px;
+  // $line-space-hover: 7px;
   $border-offset: 0.25px;
   $menu-center: $menu-height/2 - $line-height/2;
   display: inline-block;
@@ -59,7 +59,7 @@
 
   &:focus &__line-1,
   &:hover &__line-1 {
-    top: ($menu-center - $line-height - $line-space-hover + $border-offset);
+    transform: translateY(-2px);
   }
 
   &:focus &__line-2,
@@ -69,7 +69,7 @@
 
   &:focus &__line-3,
   &:hover &__line-3 {
-    top: ($menu-center + $line-height + $line-space-hover + $border-offset);
+    transform: translateY(2px);
   }
 
   &.active {

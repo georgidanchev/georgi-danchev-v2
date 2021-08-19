@@ -1,5 +1,5 @@
 import About from "./js/sections/About"
-import Blogs from "./js/sections/Blogs"
+import Blog from "./js/sections/Blog"
 import Contact from "./js/sections/Contact"
 import DecorativeBorder from "./js/components/DecorativeBorder"
 import DotNavs from "./js/sections/DotNavs"
@@ -21,7 +21,7 @@ ReactDOM.render(
     <DecorativeBorder location="top" />
     <Projects />
     <DecorativeBorder location="bottom" />
-    <Blogs />
+    <Blog />
     <DecorativeBorder location="top" />
     <Contact />
     <Footer />
@@ -33,3 +33,4 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
+

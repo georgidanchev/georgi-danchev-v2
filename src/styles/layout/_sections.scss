@@ -3,11 +3,16 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &--borders {
+    min-height: 76vh;
+  }
+
   &--about {
-    display: flex;
-    justify-content: center;
     align-content: center;
-    flex-direction: column;
   }
 
   &--hero {

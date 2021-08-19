@@ -9,6 +9,7 @@
 
 .decorative-border {
   pointer-events: none;
+  height: 0;
 
   &__inner {
     height: 12vh;
@@ -16,7 +17,7 @@
   }
 
   &__inner--top {
-    transform: translateY(100%);
+    // transform: translateY(100%);
     clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
   }
 
