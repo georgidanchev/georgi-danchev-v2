@@ -6,7 +6,7 @@ const Home = () => {
 
   return (
     <section id="home" className="section section--hero section--clipped  home-section">
-      <div className="section__inner section-width__warp section-width">
+      <div className="section__inner home-section__warp section-width">
         <h1 className="home-section__title">
           <span className="home-section__title-inner">
             {REACT_APP_FIRST_NAME} {REACT_APP_LAST_NAME}

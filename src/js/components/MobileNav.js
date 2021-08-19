@@ -3,7 +3,7 @@ const MobileNav = () => {
     <div className="mobileNav">
       <ul className="mobileNav__list">
         <li className="mobileNav__list-item">
-          <a className="mobileNav__link" href="#hero">
+          <a className="mobileNav__link" href="#home">
             Home
           </a>
         </li>

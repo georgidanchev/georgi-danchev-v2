@@ -5,6 +5,11 @@
   flex-direction: column;
   text-align: center;
 
+  &__wrap {
+    position: relative;
+    z-index: 2;
+  }
+
   &__title {
     @include fluid-type(500px, 1600px, 32px, 62px);
     font-weight: bold;
