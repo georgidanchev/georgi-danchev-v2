@@ -7,10 +7,10 @@ const NameTitle = () => {
   }
 
   return (
-    <a href="#hero" onClick={scrollToTop}>
-      <h2 className="nameTitle">
-        {REACT_APP_FIRST_NAME}
-        <span className="nameTitle__inner"> {REACT_APP_LAST_NAME}</span>
+    <a className="nameTitle" href="#hero" onClick={scrollToTop}>
+      <h2 className="nameTitle__container">
+        { REACT_APP_FIRST_NAME }
+        <span className="nameTitle__inner"> { REACT_APP_LAST_NAME }</span>
       </h2>
     </a>
   )

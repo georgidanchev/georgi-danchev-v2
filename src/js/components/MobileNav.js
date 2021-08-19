@@ -3,27 +3,27 @@ const MobileNav = () => {
     <div className="mobileNav">
       <ul className="mobileNav__list">
         <li className="mobileNav__list-item">
-          <a className="mobileNav__link" href="#anchor-home">
+          <a className="mobileNav__link" href="#hero">
             Home
           </a>
         </li>
         <li className="mobileNav__list-item">
-          <a className="mobileNav__link" href="#anchor-about">
+          <a className="mobileNav__link" href="#about">
             About
           </a>
         </li>
         <li className="mobileNav__list-item">
-          <a className="mobileNav__link" href="#anchor-portfolio">
+          <a className="mobileNav__link" href="#portfolio">
             Portfolio
           </a>
         </li>
         <li className="mobileNav__list-item">
-          <a className="mobileNav__link" href="#anchor-blog">
+          <a className="mobileNav__link" href="#blog">
             Blog
           </a>
         </li>
         <li className="mobileNav__list-item">
-          <a className="mobileNav__link" href="#anchor-contact">
+          <a className="mobileNav__link" href="#contact">
             Contact
           </a>
         </li>

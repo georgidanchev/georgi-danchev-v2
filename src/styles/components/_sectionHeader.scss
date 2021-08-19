@@ -6,16 +6,16 @@
   }
 
   &__subheading {
-    font-weight: bold;
-    font-size: 26px;
-    line-height: 31px;
+    @include fluid-type(350px, 768px, 16px, 26px);
+    font-weight: 600;
+    line-height: 1.2;
     text-transform: uppercase;
     color: var(--secondary-colour);
   }
-  
+
   &__heading {
-    font-weight: bold;
-    font-size: 55px;
-    line-height: 65px;
+    @include fluid-type(350px, 768px, 36px, 55px);
+    font-weight: 600;
+    line-height: 1.18;
   }
 }

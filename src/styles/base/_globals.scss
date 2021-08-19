@@ -7,26 +7,6 @@
   width: 100%;
 }
 
-.decorative-border {
-  pointer-events: none;
-  height: 0;
-
-  &__inner {
-    height: 12vh;
-    background-color: var(--primary-colour);
-  }
-
-  &__inner--top {
-    // transform: translateY(100%);
-    clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
-  }
-
-  &__inner--bottom {
-    transform: rotate(-180deg) translateY(100%);
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
-  }
-}
-
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);

@@ -3,13 +3,15 @@
   display: flex;
   align-items: center;
   background-color: var(--gray-colour-4);
+  border: 1px solid transparent;
   border-radius: 6px;
   padding: 36px;
 
   &:hover,
   &:focus {
-    background-color: var(--secondary-colour);
-    color: var(--black-colour);
+    border: 1px solid var(--secondary-colour-2);
+    // background-color: var(--secondary-colour-2);
+    // color: var(--black-colour);
   }
 
   &__image {

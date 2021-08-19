@@ -18,17 +18,27 @@ const DotNavs = () => {
     <nav className="dot-navs">
       <ul className="dot-navs__list">
         <li className="dot-navs__list-item">
-          <a href="#link1" className="dot-navs__link">
-            <span className="visually-hidden">home</span>
+          <a href="#hero" className="dot-navs__link">
+            <span className="visually-hidden">hero</span>
           </a>
         </li>
         <li className="dot-navs__list-item">
-          <a href="#link2" className="dot-navs__link">
+          <a href="#about" className="dot-navs__link">
             <span className="visually-hidden">about</span>
           </a>
         </li>
         <li className="dot-navs__list-item">
-          <a href="#link3" className="dot-navs__link">
+          <a href="#projects" className="dot-navs__link">
+            <span className="visually-hidden">projects</span>
+          </a>
+        </li>
+        <li className="dot-navs__list-item">
+          <a href="#blog" className="dot-navs__link">
+            <span className="visually-hidden">blog</span>
+          </a>
+        </li>
+        <li className="dot-navs__list-item">
+          <a href="#contact" className="dot-navs__link">
             <span className="visually-hidden">contact</span>
           </a>
         </li>

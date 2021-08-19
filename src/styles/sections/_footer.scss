@@ -7,7 +7,7 @@
   position: relative;
 
   .nameTitle {
-    @media only screen and (min-width: 889px) {
+    @include media(">889px") {
       transform: translate(-50%, -50%);
       position: absolute;
       left: 50%;

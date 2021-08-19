@@ -3,9 +3,9 @@ import BlogPost from "../components/BlogPost"
 
 const Blog = () => {
   return (
-    <div className="section section--borders section--blogs section--clipped section-width blog">
+    <div id="blog" className="section section--borders section--blogs section--clipped section-width blog">
       <SectionHeader subtitle="latest posts" title="My Blog Posts" link_url="/" link_title="see more posts" />
-      <div class="blog__content">
+      <div className="blog__content">
         <BlogPost />
         <BlogPost />
         <BlogPost />

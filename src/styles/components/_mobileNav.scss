@@ -18,8 +18,8 @@
   text-align: center;
 
   &__link {
+    @include fluid-type(1400px, 1600px, 30px, 55px);
     color: var(--white-colour);
-    font-size: 55px;
     font-style: normal;
     font-weight: bold;
     line-height: 1.777;

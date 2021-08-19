@@ -4,7 +4,7 @@ const BlogPost = () => {
       <img src="https://via.placeholder.com/116" alt="" className="blog-post__image" />
       <div className="blog-post__wrap">
         <h3 className="blog-post__title">Why freelancers are more interested in Full-time jobs?</h3>
-        <div class="blog-post__label-wraps">
+        <div className="blog-post__label-wraps">
           <p className="blog-post__label">
             <svg className="blog-post__icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
