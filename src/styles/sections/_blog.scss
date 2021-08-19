@@ -4,5 +4,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
+
+    @include media("<tablet") {
+      grid-gap: 15px;
+    }
+
+    @include media("<phone") {
+      grid-template-columns: 1fr;
+    }
   }
 }

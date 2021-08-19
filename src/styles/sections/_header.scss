@@ -1,14 +1,17 @@
 .header {
+  padding-top: 25px;
   position: fixed;
-  z-index: 2;
   top: 0;
   left: 50%;
+  width: 100%;
   transform: translateX(-50%);
+  z-index: 2;
 
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  padding-top: 25px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
 
   &__inner {
     display: flex;

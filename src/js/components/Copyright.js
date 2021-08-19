@@ -1,8 +1,8 @@
 const Copyright = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
   return (
     <div className="copyright">
-      <p className="copyright__text">©{ currentYear }, All Rights Reserved</p>
+      <p className="copyright__text">©{currentYear}, All Rights Reserved</p>
     </div>
   )
 }

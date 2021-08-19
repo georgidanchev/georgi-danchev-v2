@@ -1,18 +1,19 @@
 .projects {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
   text-align: center;
 
   &__cards-wrapper {
     margin-top: 50px;
-  }
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
 
-  &__cards-wrapper {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    @include media("<desktop") {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media("<phone") {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__cta {

@@ -4,7 +4,6 @@
 // css based circle
 // http://circle.firchow.net/
 
-
 const SkillChart = (props) => {
   return (
     <div>

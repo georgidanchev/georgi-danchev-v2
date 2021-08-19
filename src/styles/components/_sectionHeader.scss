@@ -3,6 +3,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media("<tablet") {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   &__subheading {
@@ -17,5 +22,11 @@
     @include fluid-type(350px, 768px, 36px, 55px);
     font-weight: 600;
     line-height: 1.18;
+  }
+
+  &__btn {
+    @include media("<tablet") {
+      margin-top: 15px;
+    }
   }
 }

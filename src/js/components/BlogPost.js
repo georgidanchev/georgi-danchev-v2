@@ -1,7 +1,7 @@
 const BlogPost = () => {
   return (
     <div className="blog-post">
-      <img src="https://via.placeholder.com/116" alt="" className="blog-post__image" />
+      <img src="https://via.placeholder.com/110" alt="" className="blog-post__image" />
       <div className="blog-post__wrap">
         <h3 className="blog-post__title">Why freelancers are more interested in Full-time jobs?</h3>
         <div className="blog-post__label-wraps">

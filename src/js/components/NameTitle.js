@@ -9,8 +9,8 @@ const NameTitle = () => {
   return (
     <a className="nameTitle" href="#hero" onClick={scrollToTop}>
       <h2 className="nameTitle__container">
-        { REACT_APP_FIRST_NAME }
-        <span className="nameTitle__inner"> { REACT_APP_LAST_NAME }</span>
+        <span className="nameTitle__inner nameTitle__inner--first">{REACT_APP_FIRST_NAME}</span>
+        <span className="nameTitle__inner nameTitle__inner--second"> {REACT_APP_LAST_NAME}</span>
       </h2>
     </a>
   )

@@ -6,12 +6,41 @@
   padding-bottom: 50px;
   position: relative;
 
+  @include media("<tablet") {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @include media("<phone") {
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
   .nameTitle {
-    @include media(">889px") {
+    @include media(">=tablet") {
       transform: translate(-50%, -50%);
       position: absolute;
       left: 50%;
       top: 50%;
+    }
+    @include media("<tablet") {
+      margin-bottom: 10px;
+      order: 1;
+    }
+  }
+
+  .social-links {
+    @include media("<tablet") {
+      order: 2;
+      margin-bottom: 10px;
+    }
+  }
+
+  .copyright {
+    @include media("<tablet") {
+      order: 3;
     }
   }
 }

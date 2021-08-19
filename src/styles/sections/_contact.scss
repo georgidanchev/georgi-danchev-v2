@@ -12,11 +12,11 @@
     justify-content: center;
     align-items: center;
 
-    @include media(">889px") {
+    @include media(">=tablet") {
       background-color: var(--gray-colour-4);
     }
     
-    @include media("<595px") {
+    @include media("<phone") {
       padding: 0;
     }
   }
@@ -24,7 +24,7 @@
   &__image {
     margin-right: 60px;
 
-    @include media("<=1200px") {
+    @include media("<desktop") {
       display: none;
     }
   }

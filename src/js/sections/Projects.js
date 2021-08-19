@@ -3,8 +3,8 @@ import ProjectCard from "../components/ProjectCard"
 
 const About = () => {
   return (
-    <div id="projects" className="section section--projects section--clipped  projects">
-      <div className="section-width">
+    <div id="projects" className="section section--projects section--clipped">
+      <div className="section-width projects">
         <SectionHeader subtitle="My portfolio" title="My recent projects" />
 
         <div className="projects__cards-wrapper">

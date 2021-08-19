@@ -8,7 +8,7 @@ const About = () => {
       e.target.parentNode.classList.add("active")
     }
   }
-  
+
   return (
     <div id="contact" className="section section--contact contact">
       <div className="contact__container section-width">
