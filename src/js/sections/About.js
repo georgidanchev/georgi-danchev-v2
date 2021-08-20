@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section id="about" className="section section--about section--borders">
       <div className="section-width mobile-padding about">
-        <SectionHeader title="A bit about me" subtitle="" />
+        <SectionHeader title="Hello! My name is Georgi" subtitle="" />
         <div className="about__top">
           <div className="about__image-wrapper">
             <img className="about__image" src={portrait} height="500" alt="" />
@@ -23,12 +23,14 @@ const About = () => {
           </div>
         </div>
         <div className="about__bottom">
-          <SkillChart percentage="90" />
-          <SkillChart percentage="70" />
-          <SkillChart percentage="60" />
-          <SkillChart percentage="50" />
-          <SkillChart percentage="50" />
-          <SkillChart percentage="50" />
+          <div class="about__skill-charts">
+            <SkillChart percentage="90" />
+            <SkillChart percentage="70" />
+            <SkillChart percentage="60" />
+            <SkillChart percentage="50" />
+            <SkillChart percentage="50" />
+            <SkillChart percentage="50" />
+          </div>
         </div>
       </div>
     </section>

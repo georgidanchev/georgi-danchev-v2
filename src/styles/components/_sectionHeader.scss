@@ -12,7 +12,7 @@
 
   &__subheading {
     @include fluid-type(350px, 768px, 16px, 26px);
-    font-weight: 600;
+    font-weight: bold;
     line-height: 1.2;
     text-transform: uppercase;
     color: var(--secondary-colour);
@@ -20,7 +20,7 @@
 
   &__heading {
     @include fluid-type(350px, 768px, 36px, 55px);
-    font-weight: 600;
+    font-weight: bold;
     line-height: 1.18;
   }
 

@@ -1,12 +1,12 @@
 .menu-btn {
-  $menu-height: 65px;
-  $menu-width: 65px;
-  $line-width: 30px;
+  $border-offset: 0.25px;
   $line-height: 3px;
   $line-space: 6px;
-  // $line-space-hover: 7px;
-  $border-offset: 0.25px;
+  $line-width: 30px;
+  $menu-height: 60px;
+  $menu-width: 60px;
   $menu-center: $menu-height/2 - $line-height/2;
+
   display: inline-block;
   position: relative;
   height: $menu-height;
