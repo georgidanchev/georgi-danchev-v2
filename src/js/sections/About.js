@@ -23,7 +23,7 @@ const About = () => {
           </div>
         </div>
         <div className="about__bottom">
-          <div class="about__skill-charts">
+          <div className="about__skill-charts">
             <SkillChart percentage="90" />
             <SkillChart percentage="70" />
             <SkillChart percentage="60" />

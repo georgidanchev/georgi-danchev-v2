@@ -22,6 +22,7 @@
     "dev:deploy": "firebase deploy",
     "dev:test": "react-scripts test",
     "dev:eject": "react-scripts eject",
+    "build-deploy": "react-scripts build && firebase deploy",
     "format": "prettier --write \"./**/*.{js,jsx,json}\""
   },
   "eslintConfig": {

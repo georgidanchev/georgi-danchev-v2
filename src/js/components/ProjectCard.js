@@ -16,9 +16,9 @@ const ProjectCard = (props) => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in sagittis dolor, eget vulputate turpis. Aliquam est ex,
           malesuada a leo ut, laoreet volutpat risus.
         </p>
-        <a href="" className="btn btn--arrow project-card__link">
+        <button href="#" className="btn btn--arrow project-card__link">
           Read More
-        </a>
+        </button>
       </div>
     </div>
   )
