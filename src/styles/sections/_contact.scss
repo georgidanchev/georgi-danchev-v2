@@ -1,11 +1,9 @@
 .contact {
-  &__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &__inner-container {
+  &__container {
     padding: 60px;
     border-radius: 6px;
     display: inline-flex;
@@ -15,7 +13,7 @@
     @include media(">=tablet") {
       background-color: var(--gray-colour-4);
     }
-    
+
     @include media("<phone") {
       padding: 0;
     }

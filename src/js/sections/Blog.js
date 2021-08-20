@@ -3,15 +3,17 @@ import BlogPost from "../components/BlogPost"
 
 const Blog = () => {
   return (
-    <div id="blog" className="section section--borders section--blogs section--clipped section-width blog">
-      <SectionHeader subtitle="latest posts" title="My Blog Posts" link_url="/" link_title="see more posts" />
-      <div className="blog__content">
-        <BlogPost />
-        <BlogPost />
-        <BlogPost />
-        <BlogPost />
+    <section id="blog" className="section section--borders section--blogs">
+      <div className="section-width mobile-padding blog">
+        <SectionHeader subtitle="latest posts" title="My Blog Posts" link_url="/" link_title="see more posts" />
+        <div className="blog__content">
+          <BlogPost />
+          <BlogPost />
+          <BlogPost />
+          <BlogPost />
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

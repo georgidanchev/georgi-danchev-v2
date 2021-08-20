@@ -10,9 +10,9 @@ const About = () => {
   }
 
   return (
-    <div id="contact" className="section section--contact contact">
-      <div className="contact__container section-width">
-        <div className="contact__inner-container">
+    <section id="contact" className="section section--contact">
+      <div className="section-width mobile-padding mobile-padding--bordered-top contact">
+        <div className="contact__container">
           <img className="contact__image" src={contactSVG} alt="" />
           <form className="contact__form contact-form">
             <h2 className="contact-form__title">Get in Touch</h2>
@@ -40,7 +40,7 @@ const About = () => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

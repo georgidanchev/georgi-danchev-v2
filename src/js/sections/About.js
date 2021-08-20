@@ -4,8 +4,8 @@ import SectionHeader from "../components/SectionHeader"
 
 const About = () => {
   return (
-    <div id="about" className="section section--about section--borders about">
-      <div className="section-width">
+    <section id="about" className="section section--about section--borders">
+      <div className="section-width mobile-padding about">
         <SectionHeader title="A bit about me" subtitle="" />
         <div className="about__top">
           <div className="about__image-wrapper">
@@ -28,9 +28,10 @@ const About = () => {
           <SkillChart percentage="60" />
           <SkillChart percentage="50" />
           <SkillChart percentage="50" />
+          <SkillChart percentage="50" />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

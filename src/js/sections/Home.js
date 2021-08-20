@@ -5,8 +5,8 @@ const Home = () => {
   const { REACT_APP_FIRST_NAME, REACT_APP_LAST_NAME, REACT_APP_JOB_TITLE, REACT_APP_SITE_SUBTITLE } = process.env
 
   return (
-    <section id="home" className="section section--hero section--clipped  home-section">
-      <div className="section__inner home-section__warp section-width">
+    <section id="home" className="section section--hero">
+      <div className="section-width mobile-padding home-section">
         <h1 className="home-section__title">
           <span className="home-section__title-inner">
             {REACT_APP_FIRST_NAME} {REACT_APP_LAST_NAME}

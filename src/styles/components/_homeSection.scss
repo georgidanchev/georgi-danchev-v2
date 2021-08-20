@@ -5,10 +5,8 @@
   flex-direction: column;
   text-align: center;
 
-  &__wrap {
-    position: relative;
-    z-index: 2;
-  }
+  position: relative;
+  z-index: 2;
 
   &__title {
     @include fluid-type(500px, 1600px, 32px, 62px);
@@ -24,6 +22,7 @@
   }
 
   &__title-spacer {
+    color: var(--secondary-colour-2);
     margin-right: 17px;
     margin-left: 17px;
     @include media("<desktop") {
@@ -34,17 +33,5 @@
   &__text {
     @include fluid-type(500px, 1600px, 20px, 26px);
     line-height: 1.2;
-  }
-
-  #tsparticles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    @include media("<desktop") {
-      display: none;
-    }
   }
 }

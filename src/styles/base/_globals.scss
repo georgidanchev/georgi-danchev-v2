@@ -17,6 +17,19 @@
   }
 }
 
+.mobile-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &--bordered-top {
+    padding-top: 200px;
+  }
+
+  &--bordered-bottom {
+    padding-bottom: 200px;
+  }
+}
+
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
