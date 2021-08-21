@@ -1,4 +1,5 @@
 import contactSVG from "../../assets/contact.svg"
+import ResponsiveImage from "../components/ResponsiveImage"
 
 const About = () => {
   const inputChange = (e) => {
@@ -39,6 +40,9 @@ const About = () => {
             </button>
           </form>
         </div>
+      </div>
+      <div className="section__bg-image-wrapper">
+        <ResponsiveImage image_class="section__bg-image" code="v1629540939" public_id="contact_vfklx0" alt="" />
       </div>
     </section>
   )

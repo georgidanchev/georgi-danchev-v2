@@ -1,6 +1,6 @@
-import portrait from "../../assets/me.jpg"
 import SkillChart from "../components/SkillChart"
 import SectionHeader from "../components/SectionHeader"
+import ResponsiveImage from "../components/ResponsiveImage"
 
 const About = () => {
   return (
@@ -9,7 +9,7 @@ const About = () => {
         <SectionHeader title="Hello! My name is Georgi" subtitle="" />
         <div className="about__top">
           <div className="about__image-wrapper">
-            <img className="about__image" src={portrait} height="500" alt="" />
+            <ResponsiveImage image_class="about__image" code="v1629540939" public_id="me_olktte" alt="" />
           </div>
           <div className="about__container">
             <p className="about__text">

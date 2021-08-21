@@ -1,10 +1,10 @@
-import image from "../../assets/about.jpg"
+import ResponsiveImage from "./ResponsiveImage"
 
 const ProjectCard = (props) => {
   return (
     <div className="project-card">
       <div className="project-card__image-wrap">
-        <img className="project-card__image" src={image} width="300" alt="" />
+        <ResponsiveImage image_class="project-card__image" code="v1629540939" public_id="about_cphruk" alt="" />
       </div>
       <div className="project-card__content-wrap">
         <h3 className="project-card__title">Website Redesign</h3>

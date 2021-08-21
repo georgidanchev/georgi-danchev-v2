@@ -22,6 +22,9 @@
 
   &__image {
     border-radius: 6px;
+    width: 116px;
+    height: 116px;
+    object-fit: cover;
 
     @include media(">=desktop") {
       margin-right: 36px;

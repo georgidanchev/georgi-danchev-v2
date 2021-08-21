@@ -1,5 +1,6 @@
-import SectionHeader from "../components/SectionHeader"
 import ProjectCard from "../components/ProjectCard"
+import ResponsiveImage from "../components/ResponsiveImage"
+import SectionHeader from "../components/SectionHeader"
 
 const About = () => {
   return (
@@ -17,6 +18,9 @@ const About = () => {
         <a className="btn projects__cta" href={process.env.REACT_APP_GITHUB} target="_blank" rel="noreferrer">
           See more projects
         </a>
+      </div>
+      <div className="section__bg-image-wrapper">
+        <ResponsiveImage image_class="section__bg-image" code="v1629540939" public_id="about_cphruk" alt="" />
       </div>
     </section>
   )
