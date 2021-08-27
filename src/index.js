@@ -1,30 +1,11 @@
-import About from "./js/sections/About"
-import Blog from "./js/sections/Blog"
-import Contact from "./js/sections/Contact"
-import DecorativeBorder from "./js/components/DecorativeBorder"
-import DotNavs from "./js/sections/DotNavs"
-import Footer from "./js/sections/Footer"
-import Header from "./js/sections/Header"
-import Home from "./js/sections/Home"
-import Projects from "./js/sections/Projects"
+import "./styles/app.scss"
+import App from "./App"
 import React from "react"
 import ReactDOM from "react-dom"
-import "./styles/app.scss"
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
-    <DotNavs />
-    <Home />
-    <DecorativeBorder location="bottom" />
-    <About />
-    <DecorativeBorder location="top" />
-    <Projects />
-    <DecorativeBorder location="bottom" />
-    <Blog />
-    <DecorativeBorder location="top" />
-    <Contact />
-    <Footer />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 )

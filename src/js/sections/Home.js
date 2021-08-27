@@ -17,7 +17,7 @@ const Home = () => {
         </h1>
         <p className="home-section__text">{REACT_APP_SITE_SUBTITLE}</p>
       </div>
-      <div className="section__bg-image-wrapper home">
+      <div className="section__bg-image-wrapper">
         <ResponsiveImage image_class="section__bg-image" code="v1629540939" public_id="hero_rzr91t" alt="Laptop sitting on a desk" />
       </div>
       <Particles params={particleConfig} />
