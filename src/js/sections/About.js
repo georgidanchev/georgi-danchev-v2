@@ -1,4 +1,4 @@
-import SkillChart from "../components/SkillChart"
+// import SkillChart from "../components/SkillChart"
 import SectionHeader from "../components/SectionHeader"
 import ResponsiveImage from "../components/ResponsiveImage"
 
@@ -22,7 +22,7 @@ const About = () => {
             </a>
           </div>
         </div>
-        <div className="about__bottom">
+        {/* <div className="about__bottom">
           <div className="about__skill-charts">
             <SkillChart percentage="90" />
             <SkillChart percentage="70" />
@@ -31,7 +31,7 @@ const About = () => {
             <SkillChart percentage="50" />
             <SkillChart percentage="50" />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

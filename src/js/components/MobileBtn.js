@@ -1,13 +1,12 @@
+import { useSelector, useDispatch } from "react-redux"
+import { toggleMenu } from "../actions/menuActions"
+
 const MobileBtn = () => {
-  const btnClick = (e) => {
-    if (e.target.classList.contains("active")) {
-      e.target.classList.remove("active")
-    } else {
-      e.target.classList.add("active")
-    }
-  }
+  const dispatch = useDispatch()
+  const isMenuOpen = useSelector((state) => state.menuReducer.isMenuOpen)
+
   return (
-    <button className="menu-btn" onClick={btnClick}>
+    <button className={isMenuOpen ? "menu-btn active" : "menu-btn"} onClick={() => dispatch(toggleMenu())}>
       <div className="menu-btn__wrap">
         <div className="menu-btn__line menu-btn__line-1"></div>
         <div className="menu-btn__line menu-btn__line-2"></div>

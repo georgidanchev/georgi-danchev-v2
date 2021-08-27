@@ -1,33 +1,29 @@
+import { closeMenu } from "../actions/menuActions"
+import { setCurrentSection } from "../actions/navActions"
+import { useSelector, useDispatch } from "react-redux"
+
 const MobileNav = () => {
+  const allSections = useSelector((state) => state.navReducer.allSections)
+  const currentSection = useSelector((state) => state.navReducer.currentSection)
+  const isMenuOpen = useSelector((state) => state.menuReducer.isMenuOpen)
+  const dispatch = useDispatch()
+
+  const clickHandle = (nav) => {
+    dispatch(setCurrentSection(nav))
+    dispatch(closeMenu())
+  }
+
+  const allNavs = allSections.map((nav) => (
+    <li className="mobileNav__list-item" key={nav}>
+      <a className={`mobileNav__link ${nav === currentSection ? "active" : ""}`} href={`#${nav}`} onClick={() => clickHandle(nav)}>
+        {nav}
+      </a>
+    </li>
+  ))
+
   return (
-    <div className="mobileNav">
-      <ul className="mobileNav__list">
-        <li className="mobileNav__list-item">
-          <a className="mobileNav__link" href="#home">
-            Home
-          </a>
-        </li>
-        <li className="mobileNav__list-item">
-          <a className="mobileNav__link" href="#about">
-            About
-          </a>
-        </li>
-        <li className="mobileNav__list-item">
-          <a className="mobileNav__link" href="#portfolio">
-            Portfolio
-          </a>
-        </li>
-        <li className="mobileNav__list-item">
-          <a className="mobileNav__link" href="#blog">
-            Blog
-          </a>
-        </li>
-        <li className="mobileNav__list-item">
-          <a className="mobileNav__link" href="#contact">
-            Contact
-          </a>
-        </li>
-      </ul>
+    <div className={isMenuOpen ? "mobileNav active" : "mobileNav"}>
+      <ul className="mobileNav__list">{allNavs}</ul>
     </div>
   )
 }

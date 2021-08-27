@@ -5,7 +5,7 @@
   left: 30px;
   top: 50%;
 
-  @include media("<desktop") {
+  @include media("<tablet") {
     display: none;
   }
 
@@ -27,37 +27,37 @@
 }
 
 .dot-navs {
-  &__link:hover,
-  &__link:focus {
-    background-color: var(--secondary-colour);
-  }
-
-  &.active {
-    background-color: var(--secondary-colour);
-    border-radius: 13.5px;
-    height: 40px;
-  }
-
-  &__link:hover &__text,
-  &__link:focus &__text {
-    color: var(--secondary-colour);
-    opacity: 1;
-  }
-
-  &.active &__text {
-    opacity: 1;
-  }
-
   &__text {
-    color: var(--gray-colour-2);
+    color: var(--secondary-colour);
     font-size: 12px;
     font-weight: bold;
     left: calc(100% + 12px);
-    opacity: 0;
     position: absolute;
+    opacity: 0;
     text-transform: uppercase;
     top: 50%;
     transform: translateY(-50%);
     transition: opacity 300ms ease, color 300ms ease;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    border: 2px solid var(--secondary-colour);
+  }
+
+  &__link:hover &__text,
+  &__link:focus &__text {
+    opacity: 1;
+  }
+
+  &__link.active {
+    border: 2px solid var(--secondary-colour);
+    background-color: var(--secondary-colour);
+    border-radius: 13.5px;
+    // height: 40px;
+  }
+
+  &__link.active &__text {
+    opacity: 1;
   }
 }

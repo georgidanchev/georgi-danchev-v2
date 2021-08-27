@@ -1,19 +1,8 @@
-import { OPEN_MENU, CLOSE_MENU, TOGGLE_MENU } from "./types"
+import { CURRENT_SECTION } from "./types"
 
-export const openMenu = () => {
-  return {
-    type: OPEN_MENU,
-  }
-}
-
-export const closeMenu = () => {
-  return {
-    type: CLOSE_MENU,
-  }
-}
-
-export const toggleMenu = () => {
-  return {
-    type: TOGGLE_MENU,
-  }
+export const setCurrentSection = (slide) => (dispatch) => {
+  dispatch({
+    type: CURRENT_SECTION,
+    payload: slide,
+  })
 }

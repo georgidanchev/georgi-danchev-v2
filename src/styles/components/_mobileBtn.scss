@@ -90,10 +90,5 @@
       transform: rotate(-135deg);
       top: ($menu-center + $border-offset);
     }
-
-    & + .mobileNav {
-      pointer-events: auto;
-      opacity: 1;
-    }
   }
 }

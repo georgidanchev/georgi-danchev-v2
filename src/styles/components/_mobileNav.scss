@@ -6,16 +6,21 @@
   pointer-events: none;
   position: fixed;
   top: 0;
+  transform: translateX(-50%);
   transition: opacity 300ms ease-in-out;
   width: 100vw;
   z-index: -1;
-  transform: translateX(-50%);
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
+
+  &.active {
+    pointer-events: auto;
+    opacity: 1;
+  }
 
   &__link {
     @include fluid-type(1400px, 1600px, 30px, 55px);
@@ -24,7 +29,9 @@
     font-weight: bold;
     line-height: 1.777;
     text-align: center;
+    text-transform: uppercase;
 
+    &.active,
     &:hover,
     &:focus {
       color: var(--secondary-colour);

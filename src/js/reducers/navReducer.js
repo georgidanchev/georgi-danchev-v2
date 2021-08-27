@@ -1,29 +1,20 @@
-import { OPEN_MENU, CLOSE_MENU, TOGGLE_MENU } from "../actions/types"
+import { CURRENT_SECTION } from "../actions/types"
 
 const initialState = {
-  isMenuOpen: false,
+  currentSection: "home",
+  allSections: ["home", "about", "projects", "blog", "contact"],
 }
 
-const navReducer = (state = initialState, action) => {
+const menuReducer = (state = initialState, action) => {
   switch (action.type) {
-    case OPEN_MENU:
+    case CURRENT_SECTION:
       return {
         ...state,
-        isMenuOpen: true,
-      }
-    case CLOSE_MENU:
-      return {
-        ...state,
-        isMenuOpen: false,
-      }
-    case TOGGLE_MENU:
-      return {
-        ...state,
-        isMenuOpen: !state.isMenuOpen,
+        currentSection: action.payload,
       }
     default:
       return state
   }
 }
 
-export default navReducer
+export default menuReducer
