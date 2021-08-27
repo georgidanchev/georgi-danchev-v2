@@ -1,31 +1,32 @@
-import { Provider } from "react-redux"
-import About from "./js/sections/About"
-import Blog from "./js/sections/Blog"
-import Contact from "./js/sections/Contact"
+import { setCurrentSection } from "./js/actions/scrollActions"
+import { useDispatch } from "react-redux"
 import DecorativeBorder from "./js/components/DecorativeBorder"
 import DotNavs from "./js/sections/DotNavs"
 import Footer from "./js/sections/Footer"
 import Header from "./js/sections/Header"
-import Home from "./js/sections/Home"
-import Projects from "./js/sections/Projects"
-import store from "./js/store"
+import React from "react"
+import SectionAbout from "./js/sections/About"
+import SectionBlog from "./js/sections/Blog"
+import SectionContact from "./js/sections/Contact"
+import SectionHome from "./js/sections/Home"
+import SectionProjects from "./js/sections/Projects"
 
 const App = () => {
   return (
-    <Provider store={store}>
+    <React.Fragment>
       <Header />
       <DotNavs />
-      <Home />
+      <SectionHome />
       <DecorativeBorder location="bottom" />
-      <About />
+      <SectionAbout />
       <DecorativeBorder location="top" />
-      <Projects />
+      <SectionProjects />
       <DecorativeBorder location="bottom" />
-      <Blog />
+      <SectionBlog />
       <DecorativeBorder location="top" />
-      <Contact />
+      <SectionContact />
       <Footer />
-    </Provider>
+    </React.Fragment>
   )
 }
 
