@@ -1,10 +1,15 @@
 // import SkillChart from "../components/SkillChart"
-import SectionHeader from "../components/SectionHeader"
+import { useRef } from "react"
 import ResponsiveImage from "../components/ResponsiveImage"
+import SectionHeader from "../components/SectionHeader"
+import useIntersection from "../helpers/useIntersection"
 
 const About = () => {
+  const ref_about = useRef()
+  useIntersection(ref_about, "about")
+
   return (
-    <section id="about" className="section section--about section--borders">
+    <section ref={ref_about} id="about" className="section section--about section--borders">
       <div className="section-width mobile-padding about">
         <SectionHeader title="Hello! My name is Georgi" subtitle="" />
         <div className="about__top">

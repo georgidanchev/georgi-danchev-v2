@@ -1,10 +1,15 @@
+import { useRef } from "react"
 import ProjectCard from "../components/ProjectCard"
 import ResponsiveImage from "../components/ResponsiveImage"
 import SectionHeader from "../components/SectionHeader"
+import useIntersection from "../helpers/useIntersection"
 
 const About = () => {
+  const ref_projects = useRef()
+  useIntersection(ref_projects, "projects")
+
   return (
-    <section id="projects" className="section section--projects">
+    <section ref={ref_projects} id="projects" className="section section--projects">
       <div className="section-width mobile-padding mobile-padding--bordered-top mobile-padding--bordered-bottom projects">
         <SectionHeader subtitle="My portfolio" title="My recent projects" />
 

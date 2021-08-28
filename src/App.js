@@ -1,5 +1,3 @@
-import { setCurrentSection } from "./js/actions/scrollActions"
-import { useDispatch } from "react-redux"
 import DecorativeBorder from "./js/components/DecorativeBorder"
 import DotNavs from "./js/sections/DotNavs"
 import Footer from "./js/sections/Footer"

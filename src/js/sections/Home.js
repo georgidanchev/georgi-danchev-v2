@@ -1,22 +1,16 @@
 import { useRef } from "react"
-import Particles from "react-particles-js"
 import particleConfig from "../../assets/particlesjs-config.json"
+import Particles from "react-particles-js"
 import ResponsiveImage from "../components/ResponsiveImage"
-import useIntersection from "../components/useIntersection"
+import useIntersection from "../helpers/useIntersection"
 
 const Home = () => {
   const { REACT_APP_FIRST_NAME, REACT_APP_LAST_NAME, REACT_APP_JOB_TITLE, REACT_APP_SITE_SUBTITLE } = process.env
-
-  const ref = useRef()
-
-  const inViewport = useIntersection(ref)
-
-  if (inViewport) {
-    console.log("in viewport:", ref.current)
-  }
+  const home_ref = useRef()
+  useIntersection(home_ref, "home")
 
   return (
-    <section ref={ref} id="home" className="section section--hero">
+    <section ref={home_ref} id="home" className="section section--hero">
       <div className="section-width mobile-padding home-section">
         <h1 className="home-section__title">
           <span className="home-section__title-inner">

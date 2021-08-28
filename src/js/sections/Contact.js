@@ -1,7 +1,12 @@
+import { useRef } from "react"
 import contactSVG from "../../assets/contact.svg"
 import ResponsiveImage from "../components/ResponsiveImage"
+import useIntersection from "../helpers/useIntersection"
 
-const About = () => {
+const Contact = () => {
+  const ref_contact = useRef()
+  useIntersection(ref_contact, "contact")
+
   const inputChange = (e) => {
     if (e.target.value === "") {
       e.target.parentNode.classList.remove("active")
@@ -11,7 +16,7 @@ const About = () => {
   }
 
   return (
-    <section id="contact" className="section section--contact">
+    <section ref={ref_contact} id="contact" className="section section--contact">
       <div className="section-width mobile-padding mobile-padding--bordered-top contact">
         <div className="contact__container">
           <img className="contact__image" src={contactSVG} alt="" />
@@ -48,4 +53,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Contact
