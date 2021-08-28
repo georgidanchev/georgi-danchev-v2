@@ -15,7 +15,7 @@
   }
 
   &__link {
-    transition: background-color 300ms ease, height 300ms ease;
+    transition: background-color 300ms linear, border 300ms linear, height 150ms linear;
     border: 2px solid var(--gray-colour-2);
     width: 20px;
     height: 20px;
@@ -53,7 +53,7 @@
     border: 2px solid var(--secondary-colour);
     background-color: var(--secondary-colour);
     border-radius: 13.5px;
-    height: 30px;
+    // height: 30px;
   }
 
   &__link.active &__text {

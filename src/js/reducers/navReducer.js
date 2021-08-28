@@ -1,8 +1,8 @@
 import { CURRENT_SECTION, SECTION_IN_VIEW } from "../actions/types"
 
 const initialState = {
-  currentSection: "home",
-  sectionInView: "home",
+  currentSection: "",
+  sectionInView: "",
   allSections: ["home", "about", "projects", "blog", "contact"],
 }
 
