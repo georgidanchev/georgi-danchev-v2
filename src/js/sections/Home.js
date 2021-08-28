@@ -3,6 +3,7 @@ import particleConfig from "../../assets/particlesjs-config.json"
 import Particles from "react-particles-js"
 import ResponsiveImage from "../components/ResponsiveImage"
 import useIntersection from "../helpers/useIntersection"
+import DownArrow from "../components/DownArrow"
 
 const Home = () => {
   const { REACT_APP_FIRST_NAME, REACT_APP_LAST_NAME, REACT_APP_JOB_TITLE, REACT_APP_SITE_SUBTITLE } = process.env
@@ -25,6 +26,7 @@ const Home = () => {
         <ResponsiveImage image_class="section__bg-image" code="v1629540939" public_id="hero_rzr91t" alt="Laptop sitting on a desk" />
       </div>
       <Particles params={particleConfig} />
+      <DownArrow />
     </section>
   )
 }

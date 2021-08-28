@@ -1,0 +1,32 @@
+.down-arrow {
+  animation-name: down-arrow-animate;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+
+  bottom: 12vh;
+  left: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 3;
+
+  &__image {
+  }
+}
+
+@keyframes down-arrow-animate {
+  0% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(20%);
+  }
+
+  50% {
+    transform: translateY(20%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
