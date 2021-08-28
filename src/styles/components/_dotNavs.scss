@@ -15,7 +15,7 @@
   }
 
   &__link {
-    transition: background-color 300ms ease;
+    transition: background-color 300ms ease, height 300ms ease;
     border: 2px solid var(--gray-colour-2);
     width: 20px;
     height: 20px;
@@ -28,7 +28,7 @@
 
 .dot-navs {
   &__text {
-    color: var(--secondary-colour);
+    color: var(--gray-colour-2);
     font-size: 12px;
     font-weight: bold;
     left: calc(100% + 12px);
@@ -37,7 +37,6 @@
     text-transform: uppercase;
     top: 50%;
     transform: translateY(-50%);
-    transition: opacity 300ms ease, color 300ms ease;
   }
 
   &__link:hover,
@@ -54,10 +53,11 @@
     border: 2px solid var(--secondary-colour);
     background-color: var(--secondary-colour);
     border-radius: 13.5px;
-    // height: 40px;
+    height: 30px;
   }
 
   &__link.active &__text {
+    color: var(--secondary-colour);
     opacity: 1;
   }
 }

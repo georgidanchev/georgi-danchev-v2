@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 
 const MobileNav = () => {
   const allSections = useSelector((state) => state.navReducer.allSections)
-  const currentSection = useSelector((state) => state.navReducer.currentSection)
+  const currentSection = useSelector((state) => state.navReducer.sectionInView)
   const isMenuOpen = useSelector((state) => state.menuReducer.isMenuOpen)
   const dispatch = useDispatch()
 

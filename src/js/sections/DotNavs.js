@@ -3,7 +3,7 @@ import { setCurrentSection } from "../actions/navActions"
 
 const DotNavs = () => {
   const dispatch = useDispatch()
-  const currentSection = useSelector((state) => state.navReducer.currentSection)
+  const currentSection = useSelector((state) => state.navReducer.sectionInView)
   const allSections = useSelector((state) => state.navReducer.allSections)
 
   const dotNavs = allSections.map((nav) => (

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { setCurrentSection } from "../actions/navActions"
+import { setSectionInView } from "../actions/navActions"
 import { useDispatch } from "react-redux"
 
 export default function useOnScreen(ref, section) {
@@ -22,7 +22,7 @@ export default function useOnScreen(ref, section) {
 
   useEffect(() => {
     if (isIntersecting) {
-      dispatch(setCurrentSection(section))
+      dispatch(setSectionInView(section))
     }
   }, [isIntersecting, dispatch, section])
 }

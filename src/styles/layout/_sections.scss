@@ -12,6 +12,11 @@
     margin-top: -12vh;
     padding-top: 12vh;
     min-height: 88vh;
+
+    @include media("<phone") {
+      margin-top: -6vh;
+      padding-top: 6vh;
+    }
   }
 
   &--about {
@@ -35,7 +40,7 @@
   }
 
   &__bg-image-wrapper::after {
-    background: linear-gradient(103.59deg, rgba(7, 8, 17, 0.95) 2.03%, rgba(7, 8, 17, 0.95) 98.49%);
+    background: rgba(7, 8, 17, 0.95);
     position: absolute;
     top: 0;
     left: 0;
