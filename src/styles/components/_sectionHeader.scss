@@ -10,18 +10,28 @@
     }
   }
 
+  &__wrapper {
+    margin-bottom: 100px;
+
+    @include media("<tablet") {
+      margin-bottom: 30px;
+    }
+  }
+
   &__subheading {
     @include fluid-type(350px, 768px, 16px, 26px);
     font-weight: bold;
     line-height: 1.2;
     text-transform: uppercase;
     color: var(--secondary-colour);
+    margin-bottom: 10px;
   }
 
   &__heading {
-    @include fluid-type(350px, 768px, 36px, 55px);
+    @include fluid-type(350px, 768px, 31px, 55px);
+    text-transform: uppercase;
     font-weight: bold;
-    line-height: 1.18;
+    line-height: 1.333;
   }
 
   &__btn {

@@ -5,7 +5,11 @@
   left: 30px;
   top: 50%;
 
-  @include media("<tablet") {
+  @include media("<desktop-large") {
+    left: 15px;
+  }
+
+  @include media("<desktop") {
     display: none;
   }
 

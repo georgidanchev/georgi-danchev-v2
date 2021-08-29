@@ -14,11 +14,11 @@ const Home = () => {
     <section ref={home_ref} id="home" className="section section--hero">
       <div className="section-width mobile-padding home-section">
         <h1 className="home-section__title">
-          <span className="home-section__title-inner">
+          <span className="home-section__title-inner home-section__title-inner--first">
             {REACT_APP_FIRST_NAME} {REACT_APP_LAST_NAME}
           </span>
           <span className="home-section__title-spacer">|</span>
-          <span className="home-section__title-inner">{REACT_APP_JOB_TITLE}</span>
+          <span className="home-section__title-inner home-section__title-inner--second">{REACT_APP_JOB_TITLE}</span>
         </h1>
         <p className="home-section__text">{REACT_APP_SITE_SUBTITLE}</p>
       </div>

@@ -10,6 +10,10 @@
   z-index: 3;
 
   &__image {
+    @include media("<mobile-large") {
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 

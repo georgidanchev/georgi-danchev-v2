@@ -11,12 +11,13 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
     @include media(">=tablet") {
       background-color: var(--gray-colour-4);
     }
 
-    @include media("<phone") {
+    @include media("<mobile-large") {
       padding: 0;
     }
   }
@@ -24,7 +25,7 @@
   &__image {
     margin-right: 60px;
 
-    @include media("<desktop") {
+    @include media("<desktop-large") {
       display: none;
     }
   }

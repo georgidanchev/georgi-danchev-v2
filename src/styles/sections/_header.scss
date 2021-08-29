@@ -1,11 +1,14 @@
 .header {
+  left: 0;
   padding-top: 25px;
   position: fixed;
+  right: 0;
   top: 0;
-  left: 50%;
-  width: 100%;
-  transform: translateX(-50%);
   z-index: 6;
+
+  @include media("<mobile-large") {
+    padding-top: 15px;
+  }
 
   &__container {
     display: flex;

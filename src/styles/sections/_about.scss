@@ -1,7 +1,6 @@
 .about {
   .section-header__wrapper {
     text-align: center;
-    margin-bottom: 60px;
   }
 
   &__top {
@@ -9,13 +8,19 @@
     justify-content: center;
     align-content: center;
 
-    @include media("<desktop") {
+    @include media("<desktop-large") {
       flex-direction: column;
     }
   }
 
   &__image-wrapper {
     position: relative;
+    margin: 25px;
+
+    @include media("<desktop-large") {
+      align-self: center;
+    }
+
     &:after {
       background-color: var(--white-colour);
       opacity: 0.24;
@@ -32,10 +37,6 @@
       bottom: 0;
       z-index: -1;
     }
-
-    @include media("<desktop") {
-      align-self: center;
-    }
   }
 
   &__container {
@@ -44,15 +45,15 @@
     justify-content: flex-start;
     flex-wrap: wrap;
 
-    @include media(">=desktop") {
+    @include media(">=desktop-large") {
       margin-left: 100px;
       max-width: 600px;
     }
 
-    @include media("<desktop") {
+    @include media("<desktop-large") {
       flex-direction: column;
       text-align: center;
-      margin-top: 60px;
+      margin-top: 30px;
       width: 100%;
     }
   }
@@ -64,20 +65,21 @@
   }
 
   &__text {
-    @include fluid-type(500px, 1600px, 24px, 30px);
+    @include fluid-type(500px, 1600px, 18px, 30px);
     font-weight: 500;
     line-height: 1.5;
-    @include media("<desktop") {
+    text-align: justify;
+    @include media("<desktop-large") {
       max-width: 700px;
     }
   }
 
   &__link {
     margin-top: 60px;
-    @include media("<desktop") {
+    @include media("<desktop-large") {
       margin-left: auto;
       margin-right: auto;
-      margin-top: 30px;
+      margin-top: 45px;
     }
   }
 

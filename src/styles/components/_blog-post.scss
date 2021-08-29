@@ -11,7 +11,7 @@
     padding: 15px;
   }
 
-  @include media("<desktop") {
+  @include media("<desktop-large") {
     flex-direction: column;
   }
 
@@ -26,11 +26,11 @@
     height: 116px;
     object-fit: cover;
 
-    @include media(">=desktop") {
+    @include media(">=desktop-large") {
       margin-right: 36px;
     }
 
-    @include media("<desktop") {
+    @include media("<desktop-large") {
       margin-bottom: 30px;
       width: 100%;
     }

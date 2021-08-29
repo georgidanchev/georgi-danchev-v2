@@ -8,7 +8,7 @@
     height: 12vh;
     background-color: var(--primary-colour);
 
-    @include media("<phone") {
+    @include media("<mobile-large") {
       height: 6vh;
     }
   }

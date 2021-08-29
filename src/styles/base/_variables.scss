@@ -10,4 +10,11 @@
   --secondary-colour-2: #ffc576;
 }
 
-$breakpoints: (phone: 580px, tablet: 768px, desktop: 1200px);
+$breakpoints: (
+  desktop-large: 1200px,
+  desktop: 1024px,
+  tablet-large: 960px,
+  tablet: 769px,
+  mobile-large: 590px,
+  mobile: 425px,
+);

@@ -13,7 +13,7 @@
     padding-top: 12vh;
     min-height: 88vh;
 
-    @include media("<phone") {
+    @include media("<mobile-large") {
       margin-top: -6vh;
       padding-top: 6vh;
     }

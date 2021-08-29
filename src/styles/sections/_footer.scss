@@ -13,7 +13,7 @@
     padding-bottom: 30px;
   }
 
-  @include media("<phone") {
+  @include media("<mobile-large") {
     padding-top: 20px;
     padding-bottom: 15px;
   }
