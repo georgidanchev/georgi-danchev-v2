@@ -21,7 +21,7 @@ const Contact = () => {
         <div className="contact__container">
           <img className="contact__image" src={contactSVG} alt="" />
           <form className="contact__form contact-form">
-            <h2 className="contact-form__title">Get in Touch</h2>
+            <h2 className="contact-form__title section-header__heading">Get in Touch</h2>
             <div className="contact-form__input-group">
               <input className="contact-form__input" type="email" id="name" onChange={inputChange} />
               <label className="contact-form__label" htmlFor="name">

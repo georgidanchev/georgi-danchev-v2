@@ -1,4 +1,10 @@
 .section-header {
+  margin-bottom: 100px;
+
+  @include media("<tablet") {
+    margin-bottom: 30px;
+  }
+
   &--w-t-btn {
     display: flex;
     justify-content: space-between;
@@ -7,14 +13,6 @@
     @include media("<tablet") {
       flex-direction: column;
       text-align: center;
-    }
-  }
-
-  &__wrapper {
-    margin-bottom: 100px;
-
-    @include media("<tablet") {
-      margin-bottom: 30px;
     }
   }
 

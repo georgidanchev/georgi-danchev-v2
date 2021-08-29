@@ -1,18 +1,21 @@
 .down-arrow {
+  transform: translateY(-50%);
+  position: absolute;
+  bottom: 12vh;
+  z-index: 3;
+  left: 50%;
+
   animation-name: down-arrow-animate;
   animation-iteration-count: infinite;
   animation-duration: 2s;
 
-  bottom: 12vh;
-  left: 50%;
-  position: absolute;
-  transform: translateY(-50%);
-  z-index: 3;
-
   &__image {
+    width: 50px;
+    height: 50px;
+
     @include media("<mobile-large") {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
     }
   }
 }
@@ -23,11 +26,11 @@
   }
 
   40% {
-    transform: translateY(20%);
+    transform: translateY(25%);
   }
 
   50% {
-    transform: translateY(20%);
+    transform: translateY(25%);
   }
 
   100% {
