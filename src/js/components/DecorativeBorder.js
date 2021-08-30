@@ -1,9 +1,5 @@
 const DecorativeBorder = (props) => {
-  return (
-    <div className="decorative-border">
-      <div className={`decorative-border__inner decorative-border__inner--${props.location}`}></div>
-    </div>
-  )
+  return <div className={`decorative-border decorative-border--${props.location}`}></div>
 }
 
 export default DecorativeBorder

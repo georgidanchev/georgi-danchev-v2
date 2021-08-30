@@ -8,17 +8,6 @@
   flex-direction: column;
   justify-content: center;
 
-  &--borders {
-    margin-top: -12vh;
-    padding-top: 12vh;
-    min-height: 88vh;
-
-    @include media("<mobile-large") {
-      margin-top: -6vh;
-      padding-top: 6vh;
-    }
-  }
-
   &--about {
     align-content: center;
   }

@@ -1,4 +1,3 @@
-import DecorativeBorder from "./js/components/DecorativeBorder"
 import DotNavs from "./js/sections/DotNavs"
 import Footer from "./js/sections/Footer"
 import Header from "./js/sections/Header"
@@ -14,8 +13,8 @@ const App = () => {
   useEffect(() => {
     new SmoothScroll('a[href*="#"]', {
       easing: "easeInOutQuad",
-      speed: 1250,
       speedAsDuration: true,
+      speed: 1250,
     })
   })
 
@@ -24,13 +23,13 @@ const App = () => {
       <Header />
       <DotNavs />
       <SectionHome />
-      <DecorativeBorder location="bottom" />
+      {/* <DecorativeBorder location="bottom" /> */}
       <SectionAbout />
-      <DecorativeBorder location="top" />
+      {/* <DecorativeBorder location="top" /> */}
       <SectionProjects />
-      <DecorativeBorder location="bottom" />
+      {/* <DecorativeBorder location="bottom" /> */}
       <SectionBlog />
-      <DecorativeBorder location="top" />
+      {/* <DecorativeBorder location="top" /> */}
       <SectionContact />
       <Footer />
     </React.Fragment>

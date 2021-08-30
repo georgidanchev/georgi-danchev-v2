@@ -1,5 +1,6 @@
 import { useRef } from "react"
 import contactSVG from "../../assets/contact.svg"
+import DecorativeBorder from "../components/DecorativeBorder"
 import ResponsiveImage from "../components/ResponsiveImage"
 import useIntersection from "../helpers/useIntersection"
 
@@ -17,7 +18,9 @@ const Contact = () => {
 
   return (
     <section ref={ref_contact} id="contact" className="section section--contact">
-      <div className="section-width mobile-padding mobile-padding--bordered-top contact">
+      <DecorativeBorder location="top" />
+
+      <div className="section-width section-width--padding contact">
         <div className="contact__container">
           <img className="contact__image" src={contactSVG} alt="" />
           <form className="contact__form contact-form">
@@ -46,6 +49,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
+
       <div className="section__bg-image-wrapper">
         <ResponsiveImage image_class="section__bg-image" code="v1629540939" public_id="contact_vfklx0" alt="" />
       </div>

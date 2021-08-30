@@ -1,24 +1,23 @@
 .decorative-border {
+  background-color: var(--primary-colour);
+  height: 12vh;
   pointer-events: none;
-  position: relative;
-  z-index: 4;
-  height: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
 
-  &__inner {
-    height: 12vh;
-    background-color: var(--primary-colour);
-
-    @include media("<mobile-large") {
-      height: 6vh;
-    }
+  @include media("<desktop") {
+    height: 6vh;
   }
 
-  &__inner--top {
+  &--top {
     clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
+    top: 0;
   }
 
-  &__inner--bottom {
-    transform: rotate(-180deg) translateY(100%);
+  &--bottom {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+    transform: rotate(-180deg);
+    bottom: 0;
   }
 }
