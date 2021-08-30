@@ -17,21 +17,21 @@
   border: none;
 
   &::after {
-    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-    height: $menu-height;
-    width: $menu-width;
-    position: absolute;
-    display: block;
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
     background-color: var(--primary-colour);
     background-image: radial-gradient(var(--gray-colour-4), var(--primary-colour));
-    z-index: -1;
-    transform: scale(0);
     border-radius: 50%;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: $menu-height;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scale(0);
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    width: $menu-width;
+    z-index: -1;
   }
 
   &__wrap {
@@ -117,6 +117,6 @@
   }
 
   &.active::after {
-    transform: scale(70);
+    transform: scale(77);
   }
 }
