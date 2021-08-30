@@ -23,13 +23,9 @@ const App = () => {
       <Header />
       <DotNavs />
       <SectionHome />
-      {/* <DecorativeBorder location="bottom" /> */}
       <SectionAbout />
-      {/* <DecorativeBorder location="top" /> */}
       <SectionProjects />
-      {/* <DecorativeBorder location="bottom" /> */}
       <SectionBlog />
-      {/* <DecorativeBorder location="top" /> */}
       <SectionContact />
       <Footer />
     </React.Fragment>
