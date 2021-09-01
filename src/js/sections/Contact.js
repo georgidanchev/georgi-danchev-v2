@@ -20,7 +20,7 @@ const Contact = () => {
     <section ref={ref_contact} id="contact" className="section section--contact">
       <DecorativeBorder location="top" />
 
-      <div className="section-width section-width--padding contact">
+      <div className="section-width section-width--padding section-width--bordered-top contact">
         <div className="contact__container">
           <img className="contact__image" src={contactSVG} alt="" />
           <form className="contact__form contact-form">
