@@ -7,14 +7,17 @@ import SectionBlog from "./js/sections/Blog"
 import SectionContact from "./js/sections/Contact"
 import SectionHome from "./js/sections/Home"
 import SectionProjects from "./js/sections/Projects"
-import SmoothScroll from "smooth-scroll"
+// import SmoothScroll from "smooth-scroll"
+import SweetScroll from "sweet-scroll"
 
 const App = () => {
   useEffect(() => {
-    new SmoothScroll('a[href*="#"]', {
-      easing: "easeInOutQuad",
-      speedAsDuration: true,
-      speed: 1250,
+    new SweetScroll({
+      cancellable: true,
+      duration: 1250,
+      preventDefault: true,
+      trigger: "a[href*='#']",
+      updateURL: true,
     })
   })
 
