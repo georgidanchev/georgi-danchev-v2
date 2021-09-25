@@ -5,6 +5,22 @@ import ResponsiveImage from "./ResponsiveImage"
 const BlogPost = (props) => {
   const blog_post = props.blog_post
 
+  const readTimeCalc = () => {
+    const text = blog_post.text
+    if (!text) return
+    const wordsPerMinute = 225
+    const words = text.trim().split(/\s+/).length
+    const time = Math.ceil(words / wordsPerMinute)
+    return time
+  }
+
+  const calcPostedDays = (date_str) => {
+    const dateArray = date_str.split("/")
+    const reFormatedDateStr = `${dateArray[1]}/${dateArray[0]}/${dateArray[2]}`
+    const postDate = new Date(reFormatedDateStr)
+    return Math.round((new Date() - postDate) / (1000 * 60 * 60 * 24))
+  }
+
   return (
     <div className="blog-post">
       <div className="blog-post__image-wrap">
@@ -20,11 +36,11 @@ const BlogPost = (props) => {
         <div className="blog-post__label-wraps">
           <p className="blog-post__label">
             <img className="blog-post__icon" src={calendar} alt="calendar icon" />
-            <span>2 days ago</span>
+            <span>{calcPostedDays(blog_post.date)} days ago</span>
           </p>
           <p className="blog-post__label">
             <img className="blog-post__icon" src={clock} alt="clock icon" />
-            <span>6 min read</span>
+            <span>{readTimeCalc(blog_post.text)} min read</span>
           </p>
         </div>
       </div>

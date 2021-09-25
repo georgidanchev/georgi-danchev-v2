@@ -5,7 +5,7 @@ const SectionHeader = (props) => {
         <p className="section-header__subheading">{props.subtitle}</p>
         <h2 className="section-header__heading">{props.title}</h2>
       </div>
-      {props.link_title != null ? (
+      {props.link_url != null ? (
         <a href={props.link_url} className="btn section-header__btn">
           {props.link_title}
         </a>

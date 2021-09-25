@@ -17,7 +17,7 @@ const Blog = () => {
   return (
     <section ref={ref_blog} id="blog" className="section section--blogs">
       <div className="section-width section-width--padding blog">
-        <SectionHeader subtitle="latest posts" title="My Blog Posts" link_url="/" link_title="see more posts" />
+        <SectionHeader subtitle="latest posts" title="My Blog Posts" link_title="see more posts" link_url={null} />
         <div className="blog__content">{blogPosts}</div>
       </div>
     </section>
