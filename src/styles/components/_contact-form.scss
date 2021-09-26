@@ -61,4 +61,13 @@
       border: 1px solid var(--secondary-colour);
     }
   }
+
+  &__btn {
+    min-width: 178px;
+
+    &[disabled] {
+      cursor: not-allowed;
+      opacity: 0.8;
+    }
+  }
 }
