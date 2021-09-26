@@ -7,9 +7,9 @@ import useIntersection from "../helpers/useIntersection"
 const Contact = () => {
   const ref_contact = useRef()
   useIntersection(ref_contact, "contact")
-
   const submitBtn = React.createRef()
   let isFormSent = false
+
   const btnStates = {
     error: "error",
     sending: "sending",
@@ -85,7 +85,7 @@ const Contact = () => {
       .then(() => {
         submitBtnManager(btnStates.sent)
         resetInputFields(e)
-        isFormSent = true;
+        isFormSent = true
       })
       .catch((err) => {
         submitBtnManager(btnStates.error)

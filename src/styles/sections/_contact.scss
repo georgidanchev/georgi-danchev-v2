@@ -14,7 +14,7 @@
     width: 100%;
 
     @include media(">=tablet") {
-      background-color: var(--gray-colour-4);
+      background-color: var(--color-gray-4);
     }
 
     @include media("<mobile-large") {

@@ -6,7 +6,7 @@
 
 .circle-bg {
   fill: none;
-  stroke: var(--gray-colour-2);
+  stroke: var(--color-gray-2);
   stroke-width: 2.8;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .circular-chart.orange .circle {
-  stroke: var(--secondary-colour);
+  stroke: var(--color-secondary);
 }
 
 .circular-chart.green .circle {
@@ -36,7 +36,7 @@
 }
 
 .percentage {
-  fill: var(--white-colour);
+  fill: var(--color-white);
   text-anchor: middle;
   font-weight: bold;
   line-height: 1;

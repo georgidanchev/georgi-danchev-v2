@@ -17,8 +17,8 @@
   border: none;
 
   &::after {
-    background-color: var(--primary-colour);
-    background-image: radial-gradient(var(--gray-colour-4), var(--primary-colour));
+    background-color: var(--color-primary);
+    background-image: radial-gradient(var(--color-gray-4), var(--color-primary));
     border-radius: 50%;
     bottom: 0;
     content: "";
@@ -38,7 +38,7 @@
     box-shadow: 0 1rem 3rem rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     overflow: hidden;
-    background-color: var(--secondary-colour);
+    background-color: var(--color-secondary);
     pointer-events: none;
     height: 100%;
     width: 100%;
@@ -55,7 +55,7 @@
 
   &__line {
     backface-visibility: hidden;
-    background-color: var(--black-colour);
+    background-color: var(--color-black);
     border-radius: 5px;
     height: $line-height;
     left: ($menu-width / 2 - $line-width / 2 + $border-offset);

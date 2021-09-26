@@ -28,7 +28,7 @@
 
   &__link {
     @include fluid-type(1400px, 1600px, 30px, 55px);
-    color: var(--white-colour);
+    color: var(--color-white);
     font-style: normal;
     font-weight: bold;
     line-height: 1.777;
@@ -38,7 +38,7 @@
     &.active,
     &:hover,
     &:focus {
-      color: var(--secondary-colour);
+      color: var(--color-secondary);
     }
   }
 }

@@ -1,14 +1,14 @@
 :root {
-  --white-colour: #ffffff;
-  --black-colour: #000000;
-  --gray-colour: #c6c6c6;
-  --gray-colour-2: #666a8f;
-  --gray-colour-3: #2d314c;
-  --gray-colour-4: #23263e;
-  --primary-colour: #181a29;
-  --secondary-colour: #ffb53e;
-  --secondary-colour-2: #ffc576;
-  --danger-colour: rgba(255, 14, 14, 0.712);
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray: #c6c6c6;
+  --color-gray-2: #666a8f;
+  --color-gray-3: #2d314c;
+  --color-gray-4: #23263e;
+  --color-primary: #181a29;
+  --color-secondary: #ffb53e;
+  --color-secondary-2: #ffc576;
+  --color-danger: rgba(255, 14, 14, 0.712);
 }
 
 $breakpoints: (

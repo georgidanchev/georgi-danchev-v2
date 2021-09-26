@@ -20,7 +20,7 @@
 
   &__link {
     transition: background-color 300ms linear, border 300ms linear, height 150ms linear;
-    border: 2px solid var(--gray-colour-2);
+    border: 2px solid var(--color-gray-2);
     width: 20px;
     height: 20px;
     background-color: transparent;
@@ -32,7 +32,7 @@
 
 .dot-navs {
   &__text {
-    color: var(--secondary-colour);
+    color: var(--color-secondary);
     font-size: 12px;
     font-weight: bold;
     left: calc(100% + 12px);
@@ -45,7 +45,7 @@
 
   &__link:hover,
   &__link:focus {
-    border: 2px solid var(--secondary-colour);
+    border: 2px solid var(--color-secondary);
   }
 
   &__link:hover &__text,
@@ -54,8 +54,8 @@
   }
 
   &__link.active {
-    border: 2px solid var(--secondary-colour);
-    background-color: var(--secondary-colour);
+    border: 2px solid var(--color-secondary);
+    background-color: var(--color-secondary);
     border-radius: 13.5px;
   }
 }

@@ -2,7 +2,7 @@
   transition: background-color 300ms ease;
   display: flex;
   align-items: center;
-  background-color: var(--gray-colour-4);
+  background-color: var(--color-gray-4);
   border: 1px solid transparent;
   border-radius: 6px;
   padding: 36px;
@@ -17,7 +17,7 @@
 
   &:hover,
   &:focus {
-    border: 1px solid var(--secondary-colour);
+    border: 1px solid var(--color-secondary);
   }
 
   &__wrap {
