@@ -60,6 +60,10 @@
       outline: none;
       border: 1px solid var(--secondary-colour);
     }
+
+    &.danger {
+      border: 1px solid var(--danger-colour);
+    }
   }
 
   &__btn {

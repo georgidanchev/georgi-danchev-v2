@@ -9,6 +9,7 @@ const Contact = () => {
   useIntersection(ref_contact, "contact")
 
   const submitBtn = React.createRef()
+  let isFormSent = false
   const btnStates = {
     error: "error",
     sending: "sending",
@@ -60,7 +61,7 @@ const Contact = () => {
         break
       case btnStates.sending:
         submitBtn.current.innerText = "Sending..."
-        submitBtn.current.disabled = true
+        // submitBtn.current.disabled = true
         break
       case btnStates.sent:
         submitBtn.current.innerText = "Sent!"
@@ -70,13 +71,12 @@ const Contact = () => {
     }
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-
+  const submitForm = (e) => {
     submitBtnManager(btnStates.sending)
+    const formDate = buildFormData(e)
 
     fetch("https://postmail.invotes.com/send", {
-      body: buildFormData(e),
+      body: formDate,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
@@ -85,11 +85,58 @@ const Contact = () => {
       .then(() => {
         submitBtnManager(btnStates.sent)
         resetInputFields(e)
+        isFormSent = true;
       })
       .catch((err) => {
         submitBtnManager(btnStates.error)
         console.error(err)
       })
+  }
+
+  const validateSubmit = (e) => {
+    let passedFields = 0
+    let numberOfFields = 0
+
+    const failedValidation = (input, message) => {
+      const inputLabel = input.nextSibling
+      const placeholderText = inputLabel.innerText
+      input.classList.add("danger")
+
+      if (message !== undefined) {
+        inputLabel.innerText = message
+      } else {
+        inputLabel.innerText = `You missed the ${inputLabel.htmlFor} field`
+      }
+
+      setTimeout(() => {
+        inputLabel.innerText = placeholderText
+        input.classList.remove("danger")
+      }, 5000)
+    }
+
+    const inputFormEmpty = (input) => {
+      failedValidation(input)
+    }
+
+    for (const input of e.target) {
+      if (input.hasAttribute("data-name")) {
+        numberOfFields++
+        if (input.value === "") {
+          inputFormEmpty(input)
+        } else {
+          passedFields++
+        }
+      }
+    }
+
+    if (numberOfFields === passedFields) {
+      submitForm(e)
+    }
+  }
+
+  const formSubmit = (e) => {
+    e.preventDefault()
+    validateSubmit(e)
   }
 
   return (
@@ -99,7 +146,7 @@ const Contact = () => {
       <div className="section-width section-width--padding section-width--bordered-top contact">
         <div className="contact__container">
           <img className="contact__image" src={contactSVG} alt="" />
-          <form className="contact__form contact-form" action="https://postmail.invotes.com/send" method="post" onSubmit={handleSubmit}>
+          <form className="contact__form contact-form" action="https://postmail.invotes.com/send" method="post" onSubmit={formSubmit}>
             <h2 className="contact-form__title section-header__heading">Get in Touch</h2>
             <div className="contact-form__input-group">
               <input className="contact-form__input" type="text" id="subject" data-name="subject" onChange={toggleActiveField} />
