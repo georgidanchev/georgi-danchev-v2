@@ -1,6 +1,6 @@
 import contactSVG from "../../assets/contact.svg"
 import DecorativeBorder from "../components/DecorativeBorder"
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
 import ResponsiveImage from "../components/ResponsiveImage"
 import useIntersection from "../helpers/useIntersection"
 
@@ -8,7 +8,7 @@ const Contact = () => {
   const ref_contact = useRef()
   useIntersection(ref_contact, "contact")
   const submitBtn = React.createRef()
-  let isFormSent = false
+  let [formSubmitted, isFormSubmitted] = useState(false)
 
   const btnStates = {
     error: "error",
@@ -85,7 +85,7 @@ const Contact = () => {
       .then(() => {
         submitBtnManager(btnStates.sent)
         resetInputFields(e)
-        isFormSent = true
+        isFormSubmitted((formSubmitted = true))
       })
       .catch((err) => {
         submitBtnManager(btnStates.error)
@@ -148,40 +148,41 @@ const Contact = () => {
           <img className="contact__image" src={contactSVG} alt="" />
           <form className="contact__form contact-form" action="https://postmail.invotes.com/send" method="post" onSubmit={formSubmit}>
             <h2 className="contact-form__title section-header__heading">Get in Touch</h2>
-            <div className="contact-form__input-group">
-              <input className="contact-form__input" type="text" id="subject" data-name="subject" onChange={toggleActiveField} />
-              <label className="contact-form__label" htmlFor="subject">
-                Subject
-              </label>
-            </div>
-            <div className="contact-form__input-group">
-              <input className="contact-form__input" type="text" id="name" data-name="extra_name" onChange={toggleActiveField} />
-              <label className="contact-form__label" htmlFor="name">
-                Your name
-              </label>
-            </div>
-            <div className="contact-form__input-group">
-              <input className="contact-form__input" type="email" id="email" data-name="extra_email" onChange={toggleActiveField} />
-              <label className="contact-form__label" htmlFor="email">
-                Your email
-              </label>
-            </div>
-            <div className="contact-form__input-group">
-              <textarea
-                className="contact-form__textarea"
-                data-name="text"
-                id="message"
-                cols="30"
-                rows="10"
-                onChange={toggleActiveField}
-              ></textarea>
-              <label className="contact-form__label" htmlFor="message">
-                How can I help you?
-              </label>
-            </div>
-            <button className="btn contact-form__btn" type="submit" ref={submitBtn}>
-              Send Message
-            </button>
+
+            {formSubmitted === false ? (
+              <React.Fragment>
+                <div className="contact-form__input-group">
+                  <input className="contact-form__input" type="text" id="name" data-name="subject" onChange={toggleActiveField} />
+                  <label className="contact-form__label" htmlFor="name">
+                    Your name
+                  </label>
+                </div>
+                <div className="contact-form__input-group">
+                  <input className="contact-form__input" type="email" id="email" data-name="extra_email" onChange={toggleActiveField} />
+                  <label className="contact-form__label" htmlFor="email">
+                    Your email
+                  </label>
+                </div>
+                <div className="contact-form__input-group">
+                  <textarea
+                    className="contact-form__textarea"
+                    data-name="text"
+                    id="message"
+                    cols="30"
+                    rows="10"
+                    onChange={toggleActiveField}
+                  ></textarea>
+                  <label className="contact-form__label" htmlFor="message">
+                    How can I help you?
+                  </label>
+                </div>
+                <button className="btn contact-form__btn" type="submit" ref={submitBtn}>
+                  Send Message
+                </button>
+              </React.Fragment>
+            ) : (
+              <p className="contact-form__success-text">Thanks for your message!</p>
+            )}
           </form>
         </div>
       </div>
