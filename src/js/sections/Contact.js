@@ -1,6 +1,6 @@
-import React, { useRef } from "react"
 import contactSVG from "../../assets/contact.svg"
 import DecorativeBorder from "../components/DecorativeBorder"
+import React, { useRef } from "react"
 import ResponsiveImage from "../components/ResponsiveImage"
 import useIntersection from "../helpers/useIntersection"
 
@@ -10,12 +10,12 @@ const Contact = () => {
 
   const submitBtn = React.createRef()
   const btnStates = {
+    error: "error",
     sending: "sending",
     sent: "sent",
-    error: "error",
   }
 
-  const toggleActive = (e) => {
+  const toggleActiveField = (e) => {
     if (e.target.value === "") {
       e.target.parentNode.classList.remove("active")
     } else {
@@ -25,12 +25,12 @@ const Contact = () => {
 
   const escapeString = (string) => {
     const newString = string
+      .replace(/"/g, "&quot;")
       .replace(/[\\"']/g, "\\$&")
       .replace(/@/g, "%40")
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
 
     return newString
   }
@@ -55,15 +55,15 @@ const Contact = () => {
 
   const submitBtnManager = (state) => {
     switch (state) {
+      case btnStates.error:
+        submitBtn.current.innerText = "Error"
+        break
       case btnStates.sending:
         submitBtn.current.innerText = "Sending..."
         submitBtn.current.disabled = true
         break
       case btnStates.sent:
         submitBtn.current.innerText = "Sent!"
-        break
-      case btnStates.error:
-        submitBtn.current.innerText = "Error"
         break
       default:
         break
@@ -102,19 +102,19 @@ const Contact = () => {
           <form className="contact__form contact-form" action="https://postmail.invotes.com/send" method="post" onSubmit={handleSubmit}>
             <h2 className="contact-form__title section-header__heading">Get in Touch</h2>
             <div className="contact-form__input-group">
-              <input className="contact-form__input" type="text" id="subject" data-name="subject" onChange={toggleActive} />
+              <input className="contact-form__input" type="text" id="subject" data-name="subject" onChange={toggleActiveField} />
               <label className="contact-form__label" htmlFor="subject">
                 Subject
               </label>
             </div>
             <div className="contact-form__input-group">
-              <input className="contact-form__input" type="text" id="name" data-name="extra_name" onChange={toggleActive} />
+              <input className="contact-form__input" type="text" id="name" data-name="extra_name" onChange={toggleActiveField} />
               <label className="contact-form__label" htmlFor="name">
                 Your name
               </label>
             </div>
             <div className="contact-form__input-group">
-              <input className="contact-form__input" type="email" id="email" data-name="extra_email" onChange={toggleActive} />
+              <input className="contact-form__input" type="email" id="email" data-name="extra_email" onChange={toggleActiveField} />
               <label className="contact-form__label" htmlFor="email">
                 Your email
               </label>
@@ -126,7 +126,7 @@ const Contact = () => {
                 id="message"
                 cols="30"
                 rows="10"
-                onChange={toggleActive}
+                onChange={toggleActiveField}
               ></textarea>
               <label className="contact-form__label" htmlFor="message">
                 How can I help you?
