@@ -22,7 +22,7 @@ const MobileNav = () => {
   ))
 
   return (
-    <div className={isMenuOpen ? "mobileNav active" : "mobileNav"}>
+    <div className={isMenuOpen ? "section-width mobileNav active" : "section-width mobileNav"}>
       <ul className="mobileNav__list">{allNavs}</ul>
     </div>
   )
