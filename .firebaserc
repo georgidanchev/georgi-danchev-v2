@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "gdanchev-staging"
-  }
+    "default": "gdanchev-staging",
+    "production": "gdanchev-personal"
+  },
+  "targets": {}
 }

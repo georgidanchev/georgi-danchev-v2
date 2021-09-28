@@ -1,14 +1,12 @@
 .mobileNav {
-  height: 100vh;
-  width: 100vw;
-  top: 0;
+  top: 100px;
   right: 0;
-  bottom: 0;
+  bottom: 100px;
   left: 0;
   opacity: 1;
   pointer-events: none;
   position: fixed;
-  z-index: -1;
+  z-index: 7;
   opacity: 0;
   transition: transform 200ms 300ms ease, opacity 200ms 500ms;
   transform: translate(42%, -44%) scale(0);

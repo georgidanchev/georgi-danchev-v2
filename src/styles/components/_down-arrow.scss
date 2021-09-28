@@ -1,15 +1,19 @@
 .down-arrow {
-  transform: translateY(-50%);
   position: absolute;
   bottom: 12vh;
   z-index: 3;
   left: 50%;
+
+  @include media("<mobile-large") {
+    bottom: 20vh;
+  }
 
   animation-name: down-arrow-animate;
   animation-iteration-count: infinite;
   animation-duration: 2s;
 
   &__image {
+    transform: translateX(-50%);
     width: 50px;
     height: 50px;
 

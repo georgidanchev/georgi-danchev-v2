@@ -3,10 +3,10 @@ import Footer from "./js/sections/Footer"
 import Header from "./js/sections/Header"
 import React, { useEffect } from "react"
 import SectionAbout from "./js/sections/About"
-import SectionBlog from "./js/sections/Blog"
+// import SectionBlog from "./js/sections/Blog"
 import SectionContact from "./js/sections/Contact"
 import SectionHome from "./js/sections/Home"
-import SectionProjects from "./js/sections/Projects"
+// import SectionProjects from "./js/sections/Projects"
 import SweetScroll from "sweet-scroll"
 
 const App = () => {
@@ -26,8 +26,8 @@ const App = () => {
       <DotNavs />
       <SectionHome />
       <SectionAbout />
-      <SectionProjects />
-      <SectionBlog />
+      {/* <SectionProjects /> */}
+      {/* <SectionBlog /> */}
       <SectionContact />
       <Footer />
     </React.Fragment>

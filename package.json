@@ -23,12 +23,14 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "build": "react-scripts build",
     "dev": "react-scripts start",
     "dev:build": "react-scripts build",
     "dev:deploy": "firebase deploy",
     "dev:test": "react-scripts test",
     "dev:eject": "react-scripts eject",
     "build-deploy": "react-scripts build && firebase deploy",
+    "build-deploy -P": "react-scripts build && firebase deploy -P",
     "format": "prettier --write \"./**/*.{js,jsx,json}\""
   },
   "eslintConfig": {
