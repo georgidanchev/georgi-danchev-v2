@@ -23,13 +23,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "watch": "react-scripts build",
-    "build": "react-scripts build",
+    "watch": "react-scripts start",
     "dev": "react-scripts start",
-    "dev:build": "react-scripts build",
     "dev:deploy": "firebase deploy",
     "dev:test": "react-scripts test",
     "dev:eject": "react-scripts eject",
+    "dev:build": "react-scripts build",
+    "build": "react-scripts build",
     "deploy": "react-scripts build && firebase deploy",
     "deploy -P": "react-scripts build && firebase deploy -P",
     "format": "prettier --write \"./**/*.{js,jsx,json}\""

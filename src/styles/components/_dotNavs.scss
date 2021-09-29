@@ -32,6 +32,7 @@
 
 .dot-navs {
   &__text {
+    transition: opacity 500ms ease;
     color: var(--color-secondary);
     font-size: 12px;
     font-weight: bold;
@@ -48,8 +49,7 @@
     border: 2px solid var(--color-secondary);
   }
 
-  &__link:hover &__text,
-  &__link:focus &__text {
+  &__link:hover &__text {
     opacity: 1;
   }
 

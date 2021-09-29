@@ -8,14 +8,14 @@ const MobileNav = () => {
   const isMenuOpen = useSelector((state) => state.menuReducer.isMenuOpen)
   const dispatch = useDispatch()
 
-  const clickHandle = (nav) => {
+  const handleClick = (nav) => {
     dispatch(setCurrentSection(nav))
     dispatch(closeMenu())
   }
 
   const allNavs = allSections.map((nav) => (
     <li className="mobileNav__list-item" key={nav}>
-      <a className={`mobileNav__link ${nav === currentSection ? "active" : ""}`} href={`#${nav}`} onClick={() => clickHandle(nav)}>
+      <a className={`mobileNav__link ${nav === currentSection ? "active" : ""}`} href={`#${nav}`} onClick={() => handleClick(nav)}>
         {nav}
       </a>
     </li>

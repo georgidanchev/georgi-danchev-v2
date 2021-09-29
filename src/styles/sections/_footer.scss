@@ -13,11 +13,6 @@
     padding-bottom: 30px;
   }
 
-  @include media("<mobile-large") {
-    padding-top: 20px;
-    padding-bottom: 15px;
-  }
-
   .nameTitle {
     @include media(">=tablet") {
       transform: translate(-50%, -50%);
@@ -33,13 +28,14 @@
 
   .social-links {
     @include media("<tablet") {
+      margin-bottom: 13px;
       order: 2;
-      margin-bottom: 10px;
     }
   }
 
   .copyright {
     @include media("<tablet") {
+      margin-bottom: 5px;
       order: 3;
     }
   }
