@@ -9,6 +9,20 @@ import SectionContact from "./js/sections/Contact"
 import SectionHome from "./js/sections/Home"
 import SweetScroll from "sweet-scroll"
 
+import * as firebase from "firebase/app"
+import { getAnalytics } from "firebase/analytics"
+
+var firebaseConfig = {
+  apiKey: "AIzaSyB-IA_pCR9n6iRot-uq0qVscbgCn00eLAY",
+  authDomain: "gdanchev-personal.firebaseapp.com",
+  databaseURL: "https://gdanchev-personal.firebaseio.com",
+  projectId: "gdanchev-personal",
+  storageBucket: "gdanchev-personal.appspot.com",
+  messagingSenderId: "865716482294",
+  appId: "1:865716482294:web:d0774ec6f2e1938e03fcd7",
+  measurementId: "G-P66WKNYGFR",
+}
+
 const App = () => {
   useEffect(() => {
     new SweetScroll({
@@ -18,6 +32,9 @@ const App = () => {
       trigger: "a[href*='#']",
       updateURL: true,
     })
+
+    firebase.initializeApp(firebaseConfig)
+    const analytics = getAnalytics()
   })
 
   return (
