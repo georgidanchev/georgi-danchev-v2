@@ -8,19 +8,29 @@ const MobileNav = () => {
   const isMenuOpen = useSelector((state) => state.menuReducer.isMenuOpen)
   const dispatch = useDispatch()
 
+  const links_refs = []
+  const setRef = (ref) => links_refs.push(ref)
+
   const handleClick = (e, nav) => {
+    e.preventDefault()
     dispatch(closeMenu())
     dispatch(setCurrentSection(nav))
-    e.preventDefault()
 
     setTimeout(() => {
-      window.location.href = e.target.href
+      links_refs[e.target.dataset.target].click()
     }, 600)
   }
 
-  const allNavs = allSections.map((nav) => (
+  const allNavs = allSections.map((nav, index) => (
     <li className="mobileNav__list-item" key={nav}>
-      <a className={`mobileNav__link ${nav === currentSection ? "active" : ""}`} href={`#${nav}`} onClick={(e) => handleClick(e, nav)}>
+      <button
+        data-target={`${index}`}
+        className={`mobileNav__link ${nav === currentSection ? "active" : ""}`}
+        onClick={(e) => handleClick(e, nav)}
+      >
+        {nav}
+      </button>
+      <a class="hidden" href={`#${nav}`} ref={setRef}>
         {nav}
       </a>
     </li>

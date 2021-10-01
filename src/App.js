@@ -1,5 +1,7 @@
 // import SectionBlog from "./js/sections/Blog"
 // import SectionProjects from "./js/sections/Projects"
+// import SweetScroll from "sweet-scroll"
+
 import DotNavs from "./js/sections/DotNavs"
 import Footer from "./js/sections/Footer"
 import Header from "./js/sections/Header"
@@ -7,6 +9,7 @@ import React, { useEffect } from "react"
 import SectionAbout from "./js/sections/About"
 import SectionContact from "./js/sections/Contact"
 import SectionHome from "./js/sections/Home"
+import SmoothScroll from "smooth-scroll"
 
 import * as firebase from "firebase/app"
 import { getAnalytics } from "firebase/analytics"
@@ -26,6 +29,12 @@ const App = () => {
   useEffect(() => {
     firebase.initializeApp(firebaseConfig)
     getAnalytics()
+
+    new SmoothScroll('a[href*="#"]', {
+      header: ".header",
+      speedAsDuration: true,
+      speed: 1000,
+    })
   })
 
   return (
