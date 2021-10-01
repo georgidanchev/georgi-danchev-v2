@@ -7,7 +7,6 @@ import React, { useEffect } from "react"
 import SectionAbout from "./js/sections/About"
 import SectionContact from "./js/sections/Contact"
 import SectionHome from "./js/sections/Home"
-import SweetScroll from "sweet-scroll"
 
 import * as firebase from "firebase/app"
 import { getAnalytics } from "firebase/analytics"
@@ -25,16 +24,8 @@ var firebaseConfig = {
 
 const App = () => {
   useEffect(() => {
-    new SweetScroll({
-      cancellable: true,
-      duration: 1250,
-      preventDefault: false,
-      trigger: "a[href*='#']",
-      updateURL: true,
-    })
-
     firebase.initializeApp(firebaseConfig)
-    const analytics = getAnalytics()
+    getAnalytics()
   })
 
   return (

@@ -8,14 +8,19 @@ const MobileNav = () => {
   const isMenuOpen = useSelector((state) => state.menuReducer.isMenuOpen)
   const dispatch = useDispatch()
 
-  const handleClick = (nav) => {
-    dispatch(setCurrentSection(nav))
+  const handleClick = (e, nav) => {
     dispatch(closeMenu())
+    dispatch(setCurrentSection(nav))
+    e.preventDefault()
+
+    setTimeout(() => {
+      window.location.href = e.target.href
+    }, 600)
   }
 
   const allNavs = allSections.map((nav) => (
     <li className="mobileNav__list-item" key={nav}>
-      <a className={`mobileNav__link ${nav === currentSection ? "active" : ""}`} href={`#${nav}`} onClick={() => handleClick(nav)}>
+      <a className={`mobileNav__link ${nav === currentSection ? "active" : ""}`} href={`#${nav}`} onClick={(e) => handleClick(e, nav)}>
         {nav}
       </a>
     </li>
