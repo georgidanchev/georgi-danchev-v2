@@ -9,7 +9,6 @@
     "firebase": "^9.1.0",
     "include-media": "^1.4.10",
     "lazysizes": "^5.3.2",
-    "node-sass": "^5.0.0",
     "normalize-scss": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -50,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.43.4"
   }
 }
