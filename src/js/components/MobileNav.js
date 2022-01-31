@@ -30,7 +30,7 @@ const MobileNav = () => {
       >
         {nav}
       </button>
-      <a class="hidden" href={`#${nav}`} ref={setRef}>
+      <a className="hidden" href={`#${nav}`} ref={setRef}>
         {nav}
       </a>
     </li>
