@@ -154,10 +154,10 @@ const Contact = () => {
 
       <div className="section-width section-width--padding section-width--bordered-top contact">
         <div
-          className="contact__container animate__animated animate__delay-1ms"
+          className="contact__container animate__animated animate__hidden animate__delay-1ms"
           data-scroll
           data-scroll-repeat="false"
-          data-scroll-class="animate__backInLeft"
+          data-scroll-class="animate__fadeIn"
         >
           <img className="contact__image" src={contactSVG} alt="" />
           <form className="contact__form contact-form" action="https://postmail.invotes.com/send" method="post" onSubmit={formSubmit}>

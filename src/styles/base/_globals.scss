@@ -6,6 +6,15 @@
   max-width: 1360px;
   width: 100%;
 
+  & .animate__hidden {
+    transition: 100ms opacity;
+    opacity: 0;
+  }
+
+  & .animate__fadeIn {
+    opacity: 1;
+  }
+
   @include media("<desktop-large") {
     padding-right: 50px;
     padding-left: 50px;

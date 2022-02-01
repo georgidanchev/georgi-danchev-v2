@@ -14,7 +14,6 @@
     "normalize-scss": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-locomotive-scroll": "^0.2.0",
     "react-particles-js": "^3.5.3",
     "react-redux": "^7.2.4",
     "react-scripts": "4.0.3",
@@ -31,8 +30,8 @@
     "dev:eject": "react-scripts eject",
     "dev:build": "react-scripts build",
     "build": "react-scripts build",
-    "deploy:production": "firebase deploy",
-    "deploy:staging": "firebase deploy -P",
+    "deploy:production": "firebase deploy -P production",
+    "deploy:staging": "firebase deploy -P default",
     "format": "prettier --write \"./**/*.{js,jsx,json}\""
   },
   "eslintConfig": {

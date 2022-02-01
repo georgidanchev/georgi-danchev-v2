@@ -9,9 +9,12 @@
   z-index: 7;
   top: 100px;
   right: 0;
-  bottom: 100px;
   left: 0;
   opacity: 0;
+
+  height: calc(100vh - 100px);
+  width: 100vw;
+  bottom: 100px;
 
   transition: transform 200ms 300ms ease, opacity 300ms 200ms;
   transform: translate(50%, -60%) scale(0);
