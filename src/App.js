@@ -38,7 +38,7 @@ const App = () => {
           speed: 1000,
           smooth: true,
           scrollFromAnywhere: true,
-          multiplier: 1,
+          multiplier: 1.25,
         }}
         watch={[]}
         containerRef={containerRef}

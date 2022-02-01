@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <section ref={home_ref} id="home" className="section section--hero" data-scroll-section>
-      <div className="section-width section-width--padding home-section">
+      <div className="section-width section-width--padding home-section animate__animated animate__zoomInDown" data-scroll-class="reveled">
         <h1 className="home-section__title">
           <span className="home-section__title-inner home-section__title-inner--first">
             {REACT_APP_FIRST_NAME} {REACT_APP_LAST_NAME}

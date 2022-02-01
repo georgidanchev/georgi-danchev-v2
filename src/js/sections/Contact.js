@@ -141,11 +141,16 @@ const Contact = () => {
   }
 
   return (
-    <section ref={ref_contact} id="contact" className="section section--contact" data-scroll-section="contact">
+    <section ref={ref_contact} id="contact" className="section section--contact" data-scroll-section>
       <DecorativeBorder location="top" />
 
       <div className="section-width section-width--padding section-width--bordered-top contact">
-        <div className="contact__container">
+        <div
+          className="contact__container animate__animated animate__delay-2ms"
+          data-scroll
+          data-scroll-repeat="false"
+          data-scroll-class="animate__slideInUp"
+        >
           <img className="contact__image" src={contactSVG} alt="" />
           <form className="contact__form contact-form" action="https://postmail.invotes.com/send" method="post" onSubmit={formSubmit}>
             <h2 className="contact-form__title section-header__heading">Get in Touch</h2>
