@@ -1,9 +1,13 @@
 import contactSVG from "../../assets/contact.svg"
 import DecorativeBorder from "../components/DecorativeBorder"
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 import ResponsiveImage from "../components/ResponsiveImage"
+import useIntersection from "../helpers/useIntersection"
 
 const Contact = () => {
+  const ref_contact = useRef()
+  useIntersection(ref_contact, "contact")
+
   const submitBtn = React.createRef()
   let [formSubmitted, isFormSubmitted] = useState(false)
 
@@ -137,7 +141,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="section section--contact" data-scroll-section>
+    <section ref={ref_contact} id="contact" className="section section--contact" data-scroll-section="contact">
       <DecorativeBorder location="top" />
 
       <div className="section-width section-width--padding section-width--bordered-top contact">
