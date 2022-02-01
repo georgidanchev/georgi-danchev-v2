@@ -5,7 +5,7 @@
   $line-width: 30px;
   $menu-height: 60px;
   $menu-width: 60px;
-  $menu-center: $menu-height/2 - $line-height/2;
+  $menu-center: $menu-height*0.5 - $line-height*0.5;
 
   display: inline-block;
   position: relative;
@@ -56,7 +56,7 @@
     background-color: var(--color-black);
     border-radius: 5px;
     height: $line-height;
-    left: ($menu-width / 2 - $line-width / 2 + $border-offset);
+    left: ($menu-width * 0.5 - $line-width * 0.5 + $border-offset);
     pointer-events: none;
     position: absolute;
     transition: width 200ms, opacity 200ms, top 200ms, transform 300ms;

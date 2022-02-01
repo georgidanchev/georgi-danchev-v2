@@ -1,19 +1,25 @@
-import { useRef } from "react"
+// import { useRef } from "react"
 import DecorativeBorder from "../components/DecorativeBorder"
 import DownArrow from "../components/DownArrow"
 import particleConfig from "../../assets/particlesjs-config.json"
 import Particles from "react-particles-js"
 import ResponsiveImage from "../components/ResponsiveImage"
-import useIntersection from "../helpers/useIntersection"
+// import useIntersection from "../helpers/useIntersection"
 
 const Home = () => {
   const { REACT_APP_FIRST_NAME, REACT_APP_LAST_NAME, REACT_APP_JOB_TITLE, REACT_APP_SITE_SUBTITLE } = process.env
-  const home_ref = useRef()
-  useIntersection(home_ref, "home")
+  // const home_ref = useRef()
+  // useIntersection(home_ref, "home")
 
   return (
-    <section ref={home_ref} id="home" className="section section--hero" data-scroll-section>
-      <div className="section-width section-width--padding home-section animate__animated animate__zoomInDown" data-scroll-class="reveled">
+    <section id="home" className="section section--hero" data-scroll-section>
+      <div
+        className="section-width section-width--padding home-section animate__animated animate__zoomInDown"
+        data-scroll
+        data-scroll-repeat="true"
+        data-scroll-offset="50%,50%"
+        data-scroll-call="home"
+      >
         <h1 className="home-section__title">
           <span className="home-section__title-inner home-section__title-inner--first">
             {REACT_APP_FIRST_NAME} {REACT_APP_LAST_NAME}

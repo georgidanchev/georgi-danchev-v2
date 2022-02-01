@@ -1,12 +1,12 @@
 import contactSVG from "../../assets/contact.svg"
 import DecorativeBorder from "../components/DecorativeBorder"
-import React, { useRef, useState } from "react"
+import React, { useState } from "react"
 import ResponsiveImage from "../components/ResponsiveImage"
-import useIntersection from "../helpers/useIntersection"
+// import useIntersection from "../helpers/useIntersection"
 
 const Contact = () => {
-  const ref_contact = useRef()
-  useIntersection(ref_contact, "contact")
+  // const ref_contact = useRef()
+  // useIntersection(ref_contact, "contact")
 
   const submitBtn = React.createRef()
   let [formSubmitted, isFormSubmitted] = useState(false)
@@ -141,15 +141,23 @@ const Contact = () => {
   }
 
   return (
-    <section ref={ref_contact} id="contact" className="section section--contact" data-scroll-section>
+    <section
+      id="contact"
+      className="section section--contact"
+      data-scroll-section
+      data-scroll
+      data-scroll-repeat="true"
+      data-scroll-call="contact"
+      data-scroll-offset="50%,50%"
+    >
       <DecorativeBorder location="top" />
 
       <div className="section-width section-width--padding section-width--bordered-top contact">
         <div
-          className="contact__container animate__animated animate__delay-2ms"
+          className="contact__container animate__animated animate__delay-1ms"
           data-scroll
           data-scroll-repeat="false"
-          data-scroll-class="animate__slideInUp"
+          data-scroll-class="animate__backInLeft"
         >
           <img className="contact__image" src={contactSVG} alt="" />
           <form className="contact__form contact-form" action="https://postmail.invotes.com/send" method="post" onSubmit={formSubmit}>

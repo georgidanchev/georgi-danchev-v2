@@ -8,6 +8,9 @@ import SectionContact from "./js/sections/Contact"
 import SectionHome from "./js/sections/Home"
 // import SectionProjects from "./js/sections/Projects"
 import { LocomotiveScrollProvider } from "react-locomotive-scroll"
+import locomotiveScroll from "locomotive-scroll"
+import { setSectionInView } from "./js/actions/navActions"
+import { useDispatch } from "react-redux"
 
 import * as firebase from "firebase/app"
 import { getAnalytics } from "firebase/analytics"
@@ -25,35 +28,37 @@ var firebaseConfig = {
 
 const App = () => {
   const containerRef = React.createRef()
+  const dispatch = useDispatch()
 
   useEffect(() => {
     firebase.initializeApp(firebaseConfig)
     getAnalytics()
+
+    const scroll = new locomotiveScroll({
+      el: containerRef.current,
+      speed: 1000,
+      smooth: true,
+      scrollFromAnywhere: true,
+      multiplier: 1,
+    })
+
+    scroll.on("call", (name) => {
+      dispatch(setSectionInView(name))
+    })
   })
 
   return (
     <React.Fragment>
-      <LocomotiveScrollProvider
-        options={{
-          speed: 1000,
-          smooth: true,
-          scrollFromAnywhere: true,
-          multiplier: 1.25,
-        }}
-        watch={[]}
-        containerRef={containerRef}
-      >
-        <div data-scroll-container ref={containerRef}>
-          <Header />
-          <DotNavs />
-          <SectionHome />
-          <SectionAbout />
-          {/* <SectionProjects />
+      <div data-scroll-container ref={containerRef}>
+        <Header />
+        <DotNavs />
+        <SectionHome />
+        <SectionAbout />
+        {/* <SectionProjects />
           <SectionBlog /> */}
-          <SectionContact />
-          <Footer />
-        </div>
-      </LocomotiveScrollProvider>
+        <SectionContact />
+        <Footer />
+      </div>
     </React.Fragment>
   )
 }
