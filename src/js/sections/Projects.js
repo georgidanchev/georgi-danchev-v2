@@ -1,14 +1,10 @@
-import { useRef } from "react"
 import DecorativeBorder from "../components/DecorativeBorder"
 import ProjectCard from "../components/ProjectCard"
 import ResponsiveImage from "../components/ResponsiveImage"
 import SectionHeader from "../components/SectionHeader"
-import useIntersection from "../helpers/useIntersection"
 import data_portfolio from "../../assets/data-portfolio.json"
 
 const About = () => {
-  const ref_projects = useRef()
-  useIntersection(ref_projects, "projects")
   let projectsList = []
 
   data_portfolio.forEach((project) => {
@@ -16,7 +12,7 @@ const About = () => {
   })
 
   return (
-    <section ref={ref_projects} id="projects" className="section section--projects">
+    <section id="projects" className="section section--projects" data-scroll-section>
       <DecorativeBorder location="top" />
 
       <div className="section-width section-width--padding section-width--bordered-top section-width--bordered-bottom projects">

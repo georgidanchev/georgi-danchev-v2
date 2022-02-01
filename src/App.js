@@ -1,15 +1,13 @@
-// import SectionBlog from "./js/sections/Blog"
-// import SectionProjects from "./js/sections/Projects"
-// import SweetScroll from "sweet-scroll"
-
 import DotNavs from "./js/sections/DotNavs"
 import Footer from "./js/sections/Footer"
 import Header from "./js/sections/Header"
 import React, { useEffect } from "react"
 import SectionAbout from "./js/sections/About"
+// import SectionBlog from "./js/sections/Blog"
 import SectionContact from "./js/sections/Contact"
 import SectionHome from "./js/sections/Home"
-import SmoothScroll from "smooth-scroll"
+// import SectionProjects from "./js/sections/Projects"
+import { LocomotiveScrollProvider } from "react-locomotive-scroll"
 
 import * as firebase from "firebase/app"
 import { getAnalytics } from "firebase/analytics"
@@ -26,27 +24,36 @@ var firebaseConfig = {
 }
 
 const App = () => {
+  const containerRef = React.createRef()
+
   useEffect(() => {
     firebase.initializeApp(firebaseConfig)
     getAnalytics()
-
-    new SmoothScroll('a[href*="#"]', {
-      header: ".header",
-      speedAsDuration: true,
-      speed: 1000,
-    })
   })
 
   return (
     <React.Fragment>
-      <Header />
-      <DotNavs />
-      <SectionHome />
-      <SectionAbout />
-      {/* <SectionProjects /> */}
-      {/* <SectionBlog /> */}
-      <SectionContact />
-      <Footer />
+      <LocomotiveScrollProvider
+        options={{
+          speed: 1000,
+          smooth: true,
+          scrollFromAnywhere: true,
+          multiplier: 1,
+        }}
+        watch={[]}
+        containerRef={containerRef}
+      >
+        <div data-scroll-container ref={containerRef}>
+          <Header />
+          <DotNavs />
+          <SectionHome />
+          <SectionAbout />
+          {/* <SectionProjects />
+          <SectionBlog /> */}
+          <SectionContact />
+          <Footer />
+        </div>
+      </LocomotiveScrollProvider>
     </React.Fragment>
   )
 }

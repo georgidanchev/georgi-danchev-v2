@@ -27,10 +27,11 @@ const MobileNav = () => {
         data-target={`${index}`}
         className={`mobileNav__link ${nav === currentSection ? "active" : ""}`}
         onClick={(e) => handleClick(e, nav)}
+        type="button"
       >
         {nav}
       </button>
-      <a className="hidden" href={`#${nav}`} ref={setRef}>
+      <a className="hidden" href={`#${nav}`} ref={setRef} data-scroll-to>
         {nav}
       </a>
     </li>

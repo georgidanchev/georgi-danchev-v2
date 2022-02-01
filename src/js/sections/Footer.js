@@ -4,7 +4,7 @@ import SocialLinks from "../components/SocialLinks"
 
 const Footer = () => {
   return (
-    <div className="footer section-width">
+    <div className="footer section-width" data-scroll-section>
       <SocialLinks />
       <NameTitle />
       <Copyright />

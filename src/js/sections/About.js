@@ -1,14 +1,9 @@
-import { useRef } from "react"
 import ResponsiveImage from "../components/ResponsiveImage"
 import SectionHeader from "../components/SectionHeader"
-import useIntersection from "../helpers/useIntersection"
 
 const About = () => {
-  const ref_about = useRef()
-  useIntersection(ref_about, "about")
-
   return (
-    <section ref={ref_about} id="about" className="section section--about">
+    <section id="about" className="section section--about" data-scroll-section>
       <div className="section-width section-width--padding about">
         <SectionHeader title="Hello! My name is Georgi" subtitle="" />
         <div className="about__top">
