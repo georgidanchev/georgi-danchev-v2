@@ -42,7 +42,10 @@
     padding-left: 30px;
     border: none;
 
-    &.active,
+    &.active {
+      color: var(--color-secondary-2);
+    }
+
     &:hover,
     &:focus {
       color: var(--color-secondary);
