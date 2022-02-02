@@ -17,6 +17,10 @@
     position: relative;
     margin: 25px;
 
+    @include media("<tablet") {
+      margin: 25px 50px;
+    }
+
     @include media("<desktop-large") {
       align-self: center;
     }
@@ -25,11 +29,11 @@
       background-color: var(--color-white);
       opacity: 0.24;
       border-radius: 8px;
-      transform: rotate(-5.87deg);
+      transform: rotate(-6deg);
 
       display: block;
       content: "";
-      border-radius: 8px;
+      border-radius: 25px;
       position: absolute;
       top: 0;
       left: 0;
@@ -59,7 +63,10 @@
   }
 
   &__image {
-    border-radius: 8px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: 0 30%;
+    border-radius: 20px;
     max-width: 400px;
     width: 100%;
   }
@@ -69,6 +76,7 @@
     font-weight: 500;
     line-height: 1.5;
     text-align: justify;
+
     @include media("<desktop-large") {
       max-width: 700px;
     }
@@ -76,6 +84,7 @@
 
   &__link {
     margin-top: 60px;
+
     @include media("<desktop-large") {
       margin-left: auto;
       margin-right: auto;
