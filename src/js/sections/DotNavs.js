@@ -20,15 +20,8 @@ const DotNavs = () => {
   ))
 
   return (
-    <nav className="dot-navs" data-scroll-section>
-      <ul
-        className="dot-navs__list animate__animated animate__delay-1s"
-        data-scroll
-        data-scroll-repeat="false"
-        data-scroll-class="animate__fadeIn"
-      >
-        {dotNavs}
-      </ul>
+    <nav className="dot-navs">
+      <ul className="dot-navs__list animate__animated animate__delay-1s animate__fadeIn">{dotNavs}</ul>
     </nav>
   )
 }
