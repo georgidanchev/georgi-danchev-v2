@@ -16,20 +16,26 @@
       color: var(--color-secondary);
     }
   }
+}
 
-  &__inner {
-    @include media("<tablet") {
-      width: 25px;
-      overflow: hidden;
-      display: inline-block;
+.header .nameTitle__inner {
+  @include media("<tablet") {
+    width: 25px;
+    overflow: hidden;
+    display: inline-block;
 
-      &--first {
-        margin-right: 3px;
-      }
+    &--first {
+      margin-right: 3px;
     }
+  }
 
-    &--second {
-      font-weight: bold;
-    }
+  &--second {
+    font-weight: bold;
+  }
+}
+
+.footer .nameTitle {
+  @include media("<tablet") {
+    margin-bottom: 17px;
   }
 }
