@@ -7,7 +7,7 @@ const NameTitle = () => {
   }
 
   return (
-    <a className="nameTitle" href="#hero" onClick={scrollToTop}>
+    <a className="nameTitle" href="#home" onClick={scrollToTop} data-scroll-to>
       <h2 className="nameTitle__container">
         <span className="nameTitle__inner nameTitle__inner--first">{REACT_APP_FIRST_NAME}</span>
         <span className="nameTitle__inner nameTitle__inner--second"> {REACT_APP_LAST_NAME}</span>

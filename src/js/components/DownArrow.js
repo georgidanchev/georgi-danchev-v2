@@ -2,7 +2,7 @@ import downArrow from "../../assets/down-arrow.svg"
 
 const DownArrow = () => {
   return (
-    <a href="#about" className="down-arrow">
+    <a href="#about" className="down-arrow" data-scroll-to>
       <img
         className="down-arrow__image animate__animated animate__delay-1s"
         data-scroll

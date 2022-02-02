@@ -30,7 +30,7 @@ const About = () => {
                 on the web. I have a passion for bringing each site from concept to completion as a hands-on technical leader focused on
                 functionality and usability. This is what I do best and enjoy the most.
               </p>
-              <a href="#contact" className="btn about__link">
+              <a href="#contact" className="btn about__link" data-scroll-to>
                 Contact Me
               </a>
             </div>
