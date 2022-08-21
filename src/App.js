@@ -35,8 +35,7 @@ const App = () => {
 
     const scroll = new locomotiveScroll({
       el: containerRef.current,
-      speed: 1000,
-      smooth: true,
+      speed: 3500,
       scrollFromAnywhere: true,
       multiplier: 1,
     })
