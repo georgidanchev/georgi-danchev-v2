@@ -8,18 +8,28 @@ const socialLinks = () => {
   return (
     <ul className="social-links">
       <li className="social-links__list-item">
-        <a href={REACT_APP_LINKEDIN} className="social-links__link" target="_blank" rel="noreferrer">
-          <img src={linkedin} alt="Instagram icon" />
+        <a
+          href={REACT_APP_LINKEDIN}
+          className="social-links__link"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={linkedin} alt="Instagram icon" height="20" width="20" />
         </a>
       </li>
       <li className="social-links__list-item">
         <a href={REACT_APP_GITHUB} className="social-links__link" target="_blank" rel="noreferrer">
-          <img src={github} alt="Github icon" />
+          <img src={github} alt="Github icon" height="20" width="20" />
         </a>
       </li>
       <li className="social-links__list-item">
-        <a href={REACT_APP_INSTAGRAM} className="social-links__link" target="_blank" rel="noreferrer">
-          <img src={instagram} alt="Instagram icon" />
+        <a
+          href={REACT_APP_INSTAGRAM}
+          className="social-links__link"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={instagram} alt="Instagram icon" height="20" width="20" />
         </a>
       </li>
       {/* <li className="social-links__list-item">

@@ -6,7 +6,7 @@ const responsiveImage = (props) => {
   return (
     <img
       className={`${image_class} lazyload`}
-      data-sizes="(max-width: 3840px) 100vw, 3840px"
+      data-sizes="auto"
       src={`https://res.cloudinary.com/dmwadnfaz/image/upload/c_scale,w_900/${code}/${public_id}.jpg`}
       data-srcset={`
         https://res.cloudinary.com/dmwadnfaz/image/upload/c_scale,w_360/${code}/${public_id}.jpg 360w,

@@ -35,11 +35,17 @@ const BlogPost = (props) => {
         <h3 className="blog-post__title">{blog_post.title}</h3>
         <div className="blog-post__label-wraps">
           <p className="blog-post__label">
-            <img className="blog-post__icon" src={calendar} alt="calendar icon" />
+            <img
+              className="blog-post__icon"
+              height="15"
+              width="15"
+              src={calendar}
+              alt="calendar icon"
+            />
             <span>{calcPostedDays(blog_post.date)} days ago</span>
           </p>
           <p className="blog-post__label">
-            <img className="blog-post__icon" src={clock} alt="clock icon" />
+            <img className="blog-post__icon" height="15" width="15" src={clock} alt="clock icon" />
             <span>{readTimeCalc(blog_post.text)} min read</span>
           </p>
         </div>
