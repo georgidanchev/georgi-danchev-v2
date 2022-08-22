@@ -1,5 +1,5 @@
-import calendar from "../../assets/calendar.svg"
-import clock from "../../assets/clock.svg"
+import calendar from "../assets/calendar.svg"
+import clock from "../assets/clock.svg"
 import ResponsiveImage from "./ResponsiveImage"
 
 const BlogPost = (props) => {

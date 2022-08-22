@@ -1,4 +1,4 @@
-import contactSVG from "../../assets/contact.svg"
+import contactSVG from "../assets/contact.svg"
 import DecorativeBorder from "../components/DecorativeBorder"
 import React, { useState } from "react"
 import ResponsiveImage from "../components/ResponsiveImage"
@@ -160,19 +160,36 @@ const Contact = () => {
           data-scroll-class="animate__fadeIn"
         >
           <img className="contact__image" src={contactSVG} alt="" />
-          <form className="contact__form contact-form" action="https://postmail.invotes.com/send" method="post" onSubmit={formSubmit}>
+          <form
+            className="contact__form contact-form"
+            action="https://postmail.invotes.com/send"
+            method="post"
+            onSubmit={formSubmit}
+          >
             <h2 className="contact-form__title section-header__heading">Get in Touch</h2>
 
             {formSubmitted === false ? (
               <React.Fragment>
                 <div className="contact-form__input-group">
-                  <input className="contact-form__input" type="text" id="name" data-name="subject" onChange={toggleActiveField} />
+                  <input
+                    className="contact-form__input"
+                    type="text"
+                    id="name"
+                    data-name="subject"
+                    onChange={toggleActiveField}
+                  />
                   <label className="contact-form__label" htmlFor="name">
                     Your name
                   </label>
                 </div>
                 <div className="contact-form__input-group">
-                  <input className="contact-form__input" type="email" id="email" data-name="extra_email" onChange={toggleActiveField} />
+                  <input
+                    className="contact-form__input"
+                    type="email"
+                    id="email"
+                    data-name="extra_email"
+                    onChange={toggleActiveField}
+                  />
                   <label className="contact-form__label" htmlFor="email">
                     Your email
                   </label>
@@ -202,7 +219,12 @@ const Contact = () => {
       </div>
 
       <div className="section__bg-image-wrapper">
-        <ResponsiveImage image_class="section__bg-image" code="v1629540939" public_id="contact_vfklx0" alt="" />
+        <ResponsiveImage
+          image_class="section__bg-image"
+          code="v1629540939"
+          public_id="contact_vfklx0"
+          alt=""
+        />
       </div>
     </section>
   )

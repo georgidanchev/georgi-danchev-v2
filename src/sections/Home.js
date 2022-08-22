@@ -1,7 +1,7 @@
 // import { useRef } from "react"
 import DecorativeBorder from "../components/DecorativeBorder"
 import DownArrow from "../components/DownArrow"
-// import particleConfig from "../../assets/particlesjs-config.json"
+// import particleConfig from "../assets/particlesjs-config.json"
 // import Particles from "react-tsparticles"
 // import { loadFull } from "tsparticles"
 // import { useCallback } from "react"

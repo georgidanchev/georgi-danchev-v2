@@ -1,6 +1,6 @@
-import instagram from "../../assets/instagram.svg"
-import github from "../../assets/github.svg"
-import linkedin from "../../assets/linkedin.svg"
+import instagram from "../assets/instagram.svg"
+import github from "../assets/github.svg"
+import linkedin from "../assets/linkedin.svg"
 
 const socialLinks = () => {
   const { REACT_APP_LINKEDIN, REACT_APP_GITHUB, REACT_APP_INSTAGRAM } = process.env

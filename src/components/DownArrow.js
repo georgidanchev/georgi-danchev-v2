@@ -1,4 +1,4 @@
-import downArrow from "../../assets/down-arrow.svg"
+import downArrow from "../assets/down-arrow.svg"
 
 const DownArrow = () => {
   return (

@@ -1,18 +1,18 @@
-// import SectionBlog from "./js/sections/Blog"
-// import SectionProjects from "./js/sections/Projects"
+// import SectionBlog from "./sections/Blog"
+// import SectionProjects from "./sections/Projects"
 import { getAnalytics } from "firebase/analytics"
-import { setSectionInView } from "./js/actions/navActions"
+import { setSectionInView } from "./actions/navActions"
 import { useDispatch } from "react-redux"
 import * as firebase from "firebase/app"
-import DotNavs from "./js/sections/DotNavs"
-import Footer from "./js/sections/Footer"
-import Header from "./js/sections/Header"
+import DotNavs from "./sections/DotNavs"
+import Footer from "./sections/Footer"
+import Header from "./sections/Header"
 import locomotiveScroll from "locomotive-scroll"
 import React, { useEffect, lazy, Suspense } from "react"
-import SectionHome from "./js/sections/Home"
+import SectionHome from "./sections/Home"
 
-const SectionAbout = lazy(() => import("./js/sections/About"))
-const SectionContact = lazy(() => import("./js/sections/Contact"))
+const SectionAbout = lazy(() => import("./sections/About"))
+const SectionContact = lazy(() => import("./sections/Contact"))
 
 var firebaseConfig = {
   apiKey: "AIzaSyB-IA_pCR9n6iRot-uq0qVscbgCn00eLAY",

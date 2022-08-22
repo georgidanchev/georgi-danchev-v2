@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import data_portfolio from "../../assets/data-portfolio.json"
+import data_portfolio from "../assets/data-portfolio.json"
 import DecorativeBorder from "../components/DecorativeBorder"
 import ProjectCard from "../components/ProjectCard"
 import ResponsiveImage from "../components/ResponsiveImage"
@@ -16,7 +16,12 @@ const About = () => {
   })
 
   return (
-    <section ref={ref_projects} id="projects" className="section section--projects" data-scroll-section>
+    <section
+      ref={ref_projects}
+      id="projects"
+      className="section section--projects"
+      data-scroll-section
+    >
       <DecorativeBorder location="top" />
 
       <div className="section-width section-width--padding section-width--bordered-top section-width--bordered-bottom projects">
@@ -30,7 +35,12 @@ const About = () => {
       </div>
 
       <div className="section__bg-image-wrapper">
-        <ResponsiveImage image_class="section__bg-image" code="v1629540939" public_id="about_cphruk" alt="" />
+        <ResponsiveImage
+          image_class="section__bg-image"
+          code="v1629540939"
+          public_id="about_cphruk"
+          alt=""
+        />
       </div>
 
       <DecorativeBorder location="bottom" />
