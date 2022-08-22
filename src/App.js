@@ -1,18 +1,18 @@
+// import SectionBlog from "./js/sections/Blog"
+// import SectionProjects from "./js/sections/Projects"
+import { getAnalytics } from "firebase/analytics"
+import { setSectionInView } from "./js/actions/navActions"
+import { useDispatch } from "react-redux"
+import * as firebase from "firebase/app"
 import DotNavs from "./js/sections/DotNavs"
 import Footer from "./js/sections/Footer"
 import Header from "./js/sections/Header"
-import React, { useEffect } from "react"
-import SectionAbout from "./js/sections/About"
-// import SectionBlog from "./js/sections/Blog"
-import SectionContact from "./js/sections/Contact"
-import SectionHome from "./js/sections/Home"
-// import SectionProjects from "./js/sections/Projects"
 import locomotiveScroll from "locomotive-scroll"
-import { setSectionInView } from "./js/actions/navActions"
-import { useDispatch } from "react-redux"
+import React, { useEffect, lazy, Suspense } from "react"
+import SectionHome from "./js/sections/Home"
 
-import * as firebase from "firebase/app"
-import { getAnalytics } from "firebase/analytics"
+const SectionAbout = lazy(() => import("./js/sections/About"))
+const SectionContact = lazy(() => import("./js/sections/Contact"))
 
 var firebaseConfig = {
   apiKey: "AIzaSyB-IA_pCR9n6iRot-uq0qVscbgCn00eLAY",
@@ -41,8 +41,13 @@ const App = () => {
     })
 
     scroll.on("call", (name) => {
+      console.log(name)
       dispatch(setSectionInView(name))
     })
+
+    setTimeout(() => {
+      scroll.update()
+    }, 3000)
   })
 
   return (
@@ -51,10 +56,12 @@ const App = () => {
         <Header />
         <DotNavs />
         <SectionHome />
-        <SectionAbout />
-        {/* <SectionProjects />
+        <Suspense fallback={<div>Loading...</div>}>
+          <SectionAbout />
+          {/* <SectionProjects />
           <SectionBlog /> */}
-        <SectionContact />
+          <SectionContact />
+        </Suspense>
         <Footer />
       </div>
     </React.Fragment>
