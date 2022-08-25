@@ -40,6 +40,8 @@ const About = () => {
           code="v1629540939"
           public_id="about_cphruk"
           alt=""
+          width="420"
+          height="900"
         />
       </div>
 

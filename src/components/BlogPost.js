@@ -29,6 +29,8 @@ const BlogPost = (props) => {
           code={process.env.REACT_APP_CLOUDINARY_ID}
           public_id={blog_post.img_name}
           alt={blog_post.img_alt}
+          width="116"
+          height="116"
         />
       </div>
       <div className="blog-post__wrap">

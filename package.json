@@ -21,6 +21,7 @@
     "tsparticles": "^2.2.3"
   },
   "scripts": {
+    "serve": "react-scripts start",
     "dev": "react-scripts start",
     "dev:deploy": "firebase deploy",
     "dev:test": "react-scripts test",

@@ -159,7 +159,7 @@ const Contact = () => {
           data-scroll-repeat="false"
           data-scroll-class="animate__fadeIn"
         >
-          <img className="contact__image" src={contactSVG} alt="" />
+          <img className="contact__image" src={contactSVG} height="450" width="540" alt="" />
           <form
             className="contact__form contact-form"
             action="https://postmail.invotes.com/send"
@@ -224,6 +224,8 @@ const Contact = () => {
           code="v1629540939"
           public_id="contact_vfklx0"
           alt=""
+          width="420"
+          height="900"
         />
       </div>
     </section>

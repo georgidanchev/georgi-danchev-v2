@@ -50,6 +50,8 @@ const Home = () => {
           code="v1629540939"
           public_id="hero_rzr91t"
           alt="Laptop sitting on a desk"
+          width="420"
+          height="900"
         />
       </div>
 

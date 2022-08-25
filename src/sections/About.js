@@ -31,6 +31,8 @@ const About = () => {
                 image_class="about__image"
                 code="v1629540939"
                 public_id="me_olktte"
+                width="264"
+                height="264"
                 alt=""
               />
             </div>
