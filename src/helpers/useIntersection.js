@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { setSectionInView } from "../actions/navActions"
+import { setSectionInView } from "../redux/navReducer"
 import { useDispatch } from "react-redux"
 
 export default function useOnScreen(ref, section) {

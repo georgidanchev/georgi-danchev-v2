@@ -1,7 +1,7 @@
 // import SectionBlog from "./sections/Blog"
 // import SectionProjects from "./sections/Projects"
 import { getAnalytics } from "firebase/analytics"
-import { setSectionInView } from "./actions/navActions"
+import { setSectionInView } from "./redux/navReducer"
 import { useDispatch } from "react-redux"
 import * as firebase from "firebase/app"
 import DotNavs from "./sections/DotNavs"
@@ -41,14 +41,14 @@ const App = () => {
     })
 
     scroll.on("call", (name) => {
-      console.log(name)
       dispatch(setSectionInView(name))
+      // console.log(name)
     })
 
     setTimeout(() => {
       scroll.update()
     }, 3000)
-  })
+  }, [containerRef, dispatch])
 
   return (
     <React.Fragment>

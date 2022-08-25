@@ -1,11 +1,11 @@
-import { closeMenu } from "../actions/menuActions"
-import { setCurrentSection } from "../actions/navActions"
+import { closeMenu } from "../redux/menuReducer"
+import { setCurrentSection } from "../redux/navReducer"
 import { useSelector, useDispatch } from "react-redux"
 
 const MobileNav = () => {
-  const allSections = useSelector((state) => state.navReducer.allSections)
-  const currentSection = useSelector((state) => state.navReducer.sectionInView)
-  const isMenuOpen = useSelector((state) => state.menuReducer.isMenuOpen)
+  const { allSections } = useSelector((state) => state.nav)
+  const { sectionInView } = useSelector((state) => state.nav)
+  const { isMenuOpen } = useSelector((state) => state.menu)
   const dispatch = useDispatch()
 
   const links_refs = []
@@ -25,7 +25,7 @@ const MobileNav = () => {
     <li className="mobileNav__list-item" key={nav}>
       <button
         data-target={`${index}`}
-        className={`mobileNav__link ${nav === currentSection ? "active" : ""}`}
+        className={`mobileNav__link ${nav === sectionInView ? "active" : ""}`}
         onClick={(e) => handleClick(e, nav)}
         type="button"
       >
