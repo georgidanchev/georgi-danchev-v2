@@ -47,7 +47,7 @@ const App = () => {
 
     setTimeout(() => {
       scroll.update()
-    }, 3000)
+    }, 2000)
   }, [containerRef, dispatch])
 
   return (

@@ -11,6 +11,9 @@ export const navSlice = createSlice({
     setSectionInView: (state, action) => {
       state.sectionInView = action.payload
     },
+    setCurrentSection: (state, action) => {
+      state.sectionInView = action.payload
+    },
   },
 })
 
