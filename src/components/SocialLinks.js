@@ -1,9 +1,9 @@
-import instagram from "../assets/instagram.svg"
+// import instagram from "../assets/instagram.svg"
 import github from "../assets/github.svg"
 import linkedin from "../assets/linkedin.svg"
 
 const socialLinks = () => {
-  const { REACT_APP_LINKEDIN, REACT_APP_GITHUB, REACT_APP_INSTAGRAM } = process.env
+  const { REACT_APP_LINKEDIN, REACT_APP_GITHUB } = process.env
 
   return (
     <ul className="social-links">
@@ -18,11 +18,16 @@ const socialLinks = () => {
         </a>
       </li>
       <li className="social-links__list-item">
-        <a href={REACT_APP_GITHUB} className="social-links__link" target="_blank" rel="noreferrer">
+        <a
+          href={REACT_APP_GITHUB}
+          className="social-links__link"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src={github} alt="Github icon" height="20" width="20" />
         </a>
       </li>
-      <li className="social-links__list-item">
+      {/* <li className="social-links__list-item">
         <a
           href={REACT_APP_INSTAGRAM}
           className="social-links__link"
@@ -31,7 +36,7 @@ const socialLinks = () => {
         >
           <img src={instagram} alt="Instagram icon" height="20" width="20" />
         </a>
-      </li>
+      </li> */}
       {/* <li className="social-links__list-item">
         <a className="social-links__link" target="_blank" rel="noreferrer">
           <svg className="social-links__icon" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
