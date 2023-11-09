@@ -53,12 +53,13 @@ body {
   letter-spacing: 0.5px;
 
   /* Prevent MacOS Over Scroll */
-  overscroll-behavior-y: none;
+  // overscroll-behavior-y: none;
 
   /* body has min-width 100% */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 main {

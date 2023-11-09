@@ -1,5 +1,5 @@
-// import SectionBlog from "./sections/Blog"
-// import SectionProjects from "./sections/Projects"
+import SectionBlog from "./sections/Blog"
+import SectionProjects from "./sections/Projects"
 import { getAnalytics } from "firebase/analytics"
 import { setSectionInView } from "./redux/navReducer"
 import { useDispatch } from "react-redux"
@@ -52,14 +52,18 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <div data-scroll-container ref={containerRef}>
+      <div
+        className="website-wrapper"
+        data-scroll-container
+        ref={containerRef}
+      >
         <Header />
         <DotNavs />
         <SectionHome />
         <Suspense fallback={<div>Loading...</div>}>
           <SectionAbout />
-          {/* <SectionProjects />
-          <SectionBlog /> */}
+          <SectionProjects />
+          <SectionBlog />
           <SectionContact />
         </Suspense>
         <Footer />
