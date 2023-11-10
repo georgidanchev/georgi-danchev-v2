@@ -64,9 +64,10 @@ const App = () => {
           <SectionAbout />
           <SectionProjects />
           <SectionBlog />
-          <SectionContact />
+          <SectionContact>
+            <Footer />
+          </SectionContact>
         </Suspense>
-        <Footer />
       </div>
     </React.Fragment>
   )

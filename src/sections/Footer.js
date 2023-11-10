@@ -5,15 +5,17 @@ import SocialLinks from "../components/SocialLinks"
 const Footer = () => {
   return (
     <div
-      className="footer section-width animate__animated animate__hidden"
+      className="footer animate__animated animate__hidden"
       data-scroll
       data-scroll-section
       data-scroll-repeat="false"
       data-scroll-class="animate__fadeIn"
     >
-      <SocialLinks />
-      <NameTitle />
-      <Copyright />
+      <div class="footer__inner section-width">
+        <SocialLinks />
+        <NameTitle />
+        <Copyright />
+      </div>
     </div>
   )
 }

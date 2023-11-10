@@ -4,7 +4,7 @@ import React, { useState } from "react"
 import ResponsiveImage from "../components/ResponsiveImage"
 // import useIntersection from "../helpers/useIntersection"
 
-const Contact = () => {
+const Contact = ({ children }) => {
   // const ref_contact = useRef()
   // useIntersection(ref_contact, "contact")
 
@@ -49,7 +49,9 @@ const Contact = () => {
     let formBody = `access_token=${process.env.REACT_APP_MAIL_TOKEN}`
     for (const element of e.target) {
       if (element.hasAttribute("data-name")) {
-        formBody += `&${element.dataset.name}=${escapeString(element.value)}`
+        formBody += `&${element.dataset.name}=${escapeString(
+          element.value,
+        )}`
       }
     }
     return formBody
@@ -141,94 +143,113 @@ const Contact = () => {
   }
 
   return (
-    <section
-      id="contact"
-      className="section section--contact"
-      data-scroll-section
-      data-scroll
-      data-scroll-repeat="true"
-      data-scroll-call="contact"
-      data-scroll-offset="50%,50%"
-    >
-      <DecorativeBorder location="top" />
+    <div className="section">
+      <section
+        id="contact"
+        data-scroll-section
+        data-scroll
+        data-scroll-repeat="true"
+        data-scroll-call="contact"
+        data-scroll-offset="50%,50%"
+      >
+        <DecorativeBorder location="top" />
 
-      <div className="section-width section-width--padding section-width--bordered-top contact">
-        <div
-          className="contact__container animate__animated animate__hidden animate__delay-1ms"
-          data-scroll
-          data-scroll-repeat="false"
-          data-scroll-class="animate__fadeIn"
-        >
-          <img className="contact__image" src={contactSVG} height="450" width="540" alt="" />
-          <form
-            className="contact__form contact-form"
-            action="https://postmail.invotes.com/send"
-            method="post"
-            onSubmit={formSubmit}
+        <div className="section-width section-width--padding contact">
+          <div
+            className="contact__container animate__animated animate__hidden animate__delay-1ms"
+            data-scroll
+            data-scroll-repeat="false"
+            data-scroll-class="animate__fadeIn"
           >
-            <h2 className="contact-form__title section-header__heading">Get in Touch</h2>
+            <img
+              className="contact__image"
+              src={contactSVG}
+              height="450"
+              width="540"
+              alt=""
+            />
+            <form
+              className="contact__form contact-form"
+              action="https://postmail.invotes.com/send"
+              method="post"
+              onSubmit={formSubmit}
+            >
+              <h2 className="contact-form__title section-header__heading">
+                Get in Touch
+              </h2>
 
-            {formSubmitted === false ? (
-              <React.Fragment>
-                <div className="contact-form__input-group">
-                  <input
-                    className="contact-form__input"
-                    type="text"
-                    id="name"
-                    data-name="subject"
-                    onChange={toggleActiveField}
-                  />
-                  <label className="contact-form__label" htmlFor="name">
-                    Your name
-                  </label>
-                </div>
-                <div className="contact-form__input-group">
-                  <input
-                    className="contact-form__input"
-                    type="email"
-                    id="email"
-                    data-name="extra_email"
-                    onChange={toggleActiveField}
-                  />
-                  <label className="contact-form__label" htmlFor="email">
-                    Your email
-                  </label>
-                </div>
-                <div className="contact-form__input-group">
-                  <textarea
-                    className="contact-form__textarea"
-                    data-name="text"
-                    id="message"
-                    cols="30"
-                    rows="10"
-                    onChange={toggleActiveField}
-                  ></textarea>
-                  <label className="contact-form__label" htmlFor="message">
-                    How can I help you?
-                  </label>
-                </div>
-                <button className="btn contact-form__btn" type="submit" ref={submitBtn}>
-                  Send Message
-                </button>
-              </React.Fragment>
-            ) : (
-              <p className="contact-form__success-text">Thanks for your message!</p>
-            )}
-          </form>
+              {formSubmitted === false ? (
+                <React.Fragment>
+                  <div className="contact-form__input-group">
+                    <input
+                      className="contact-form__input"
+                      type="text"
+                      id="name"
+                      data-name="subject"
+                      onChange={toggleActiveField}
+                    />
+                    <label className="contact-form__label" htmlFor="name">
+                      Your name
+                    </label>
+                  </div>
+                  <div className="contact-form__input-group">
+                    <input
+                      className="contact-form__input"
+                      type="email"
+                      id="email"
+                      data-name="extra_email"
+                      onChange={toggleActiveField}
+                    />
+                    <label className="contact-form__label" htmlFor="email">
+                      Your email
+                    </label>
+                  </div>
+                  <div className="contact-form__input-group">
+                    <textarea
+                      className="contact-form__textarea"
+                      data-name="text"
+                      id="message"
+                      cols="30"
+                      rows="10"
+                      onChange={toggleActiveField}
+                    ></textarea>
+                    <label
+                      className="contact-form__label"
+                      htmlFor="message"
+                    >
+                      How can I help you?
+                    </label>
+                  </div>
+                  <button
+                    className="btn contact-form__btn"
+                    type="submit"
+                    ref={submitBtn}
+                  >
+                    Send Message
+                  </button>
+                </React.Fragment>
+              ) : (
+                <p className="contact-form__success-text">
+                  Thanks for your message!
+                </p>
+              )}
+            </form>
+          </div>
         </div>
-      </div>
 
-      <div className="section__bg-image-wrapper">
-        <ResponsiveImage
-          image_class="section__bg-image"
-          code="v1629540939"
-          public_id="contact_vfklx0"
-          alt=""
-          width="420"
-          height="900"
-        />
-      </div>
-    </section>
+        <div className="section__bg-image-wrapper">
+          <ResponsiveImage
+            image_class="section__bg-image"
+            code="v1629540939"
+            public_id="contact_vfklx0"
+            alt=""
+            width="420"
+            height="900"
+          />
+        </div>
+      </section>
+      {children}
+    </div>
   )
 }
 

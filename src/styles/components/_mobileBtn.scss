@@ -1,4 +1,3 @@
-.menu-btn {
   $border-offset: 0.25px;
   $line-height: 3px;
   $line-space: 6px;
@@ -7,15 +6,17 @@
   $menu-width: 60px;
   $menu-center: $menu-height*0.5 - $line-height*0.5;
 
-  display: inline-block;
-  position: relative;
-  height: $menu-height;
-  width: $menu-width;
-  background-color: transparent;
-  margin-left: 30px;
-  border: none;
+  .menu-btn {
+    display: inline-block;
+    position: relative;
+    height: $menu-height;
+    width: $menu-width;
+    background-color: transparent;
+    margin-left: 30px;
+    border: none;
+  }
 
-  &::after {
+  .menu-btn::after {
     background-color: var(--color-primary);
     background-image: radial-gradient(var(--color-gray-4), var(--color-primary));
     border-radius: 50%;
@@ -33,25 +34,26 @@
     z-index: -1;
   }
 
-  &__wrap {
+  .menu-btn__wrap {
     border-radius: 50%;
     overflow: hidden;
-    background-color: var(--color-secondary);
+    background-color: var(--color-secondary-2);
     pointer-events: none;
     height: 100%;
     width: 100%;
   }
 
-  &:hover &__wrap,
-  &:focus &__wrap {
+  .menu-btn:hover .menu-btn__wrap,
+  .menu-btn:focus .menu-btn__wrap {
     border: 1px solid rgba(var(--colour-color), 0.45);
+    background-color: var(--color-secondary);
   }
 
-  &:focus {
+  .menu-btn:focus {
     outline: none;
   }
 
-  &__line {
+  .menu-btn__line {
     backface-visibility: hidden;
     background-color: var(--color-black);
     border-radius: 5px;
@@ -63,58 +65,57 @@
     width: $line-width;
   }
 
-  &__line-1 {
+  .menu-btn__line-1 {
     top: ($menu-center - $line-height - $line-space + $border-offset);
   }
 
-  &__line-2 {
+  .menu-btn__line-2 {
     top: ($menu-center + $border-offset);
     width: ($line-width - 10px);
   }
 
-  &__line-3 {
+  .menu-btn__line-3 {
     top: ($menu-center + $line-height + $line-space + $border-offset);
   }
 
-  &:focus,
-  &:hover {
+  .menu-btn:focus,
+  .menu-btn:hover {
     outline: none;
   }
 
-  &:focus &__line-1,
-  &:hover &__line-1 {
+  .menu-btn:focus .menu-btn__line-1,
+  .menu-btn:hover .menu-btn__line-1 {
     transform: translateY(-2px);
   }
 
-  &:focus &__line-2,
-  &:hover &__line-2 {
+  .menu-btn:focus .menu-btn__line-2,
+  .menu-btn:hover .menu-btn__line-2 {
     width: $line-width;
   }
 
-  &:focus &__line-3,
-  &:hover &__line-3 {
+  .menu-btn:focus .menu-btn__line-3,
+  .menu-btn:hover .menu-btn__line-3 {
     transform: translateY(2px);
   }
 
-  &.active &__line {
+  .menu-btn.active .menu-btn__line {
     transition: opacity 100ms, top 300ms, transform 300ms;
   }
 
-  &.active &__line-1 {
+  .menu-btn.active .menu-btn__line-1 {
     transform: rotate(135deg);
     top: ($menu-center + $border-offset);
   }
 
-  &.active &__line-2 {
+  .menu-btn.active .menu-btn__line-2 {
     opacity: 0;
   }
 
-  &.active &__line-3 {
+  .menu-btn.active .menu-btn__line-3 {
     transform: rotate(-135deg);
     top: ($menu-center + $border-offset);
   }
 
-  &.active::after {
+  .menu-btn.active::after {
     transform: scale(77);
   }
-}
